@@ -6,7 +6,7 @@ p, em, strong
 	color: blue;
 }
 
-p.gestion
+p.gestion, p.management, p.informatique
 {
 	color: red;
 }
