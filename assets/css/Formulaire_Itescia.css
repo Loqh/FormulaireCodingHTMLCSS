@@ -54,22 +54,9 @@ nav a:active
 }
 
 
-footer
-{
-	height: 100px;
-	background-color: #57B0E3
-}
-
-
-footer p
-{
-	line-height: 100px;
-}
-
-
 p, em, strong
 {
-	color: blue;
+	color: black;
 }
 
 
@@ -81,16 +68,64 @@ p, em, strong
 }
 
 
-/*pour toute balise p contenu dans objet class ="premiere_formation*/
-.premiere_formation p
+
+
+/*partir formulaire*/
+form
 {
-	color: black;
+	display: flex;
+	flex-direction: column;
+
 }
 
 
+.conteneur_formulaire
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+
+
+/*2eme colonne  (coordonnées, scolarité...)*/
+.autres_informations
+{
+	background: grey;
+}
+
+
+.autres_info_conteneur, .premiere_formation
+{
+	background-color: lightgrey;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.autres_info_conteneur p
+{
+	align-self: flex-start;
+}
+
+
+h2
+{
+	align-self: center;
+	color: rgb(100, 150, 255);
+}
+
+
+p.gestion
+{
+	background-color: green;
+}
+
 .bac
 {
- 		color : red;
+	color: red;
+	background-color: blue;
 }
 
 
@@ -104,6 +139,42 @@ p, em, strong
 {
 	width: 80px;
 	height: auto;
+	align-self:  flex-start;
+}
+
+
+
+.premiere_formation p
+{
+	color: black;
+	background-color: pink;
+	align-self: flex-start;
+}
+
+
+
+
+
+.conteneur_bouton
+{
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+
+footer
+{
+	height: 100px;
+	background-color: #57B0E3
+}
+
+
+footer p
+{
+	line-height: 100px;
 }
 
 /* h3 + p {color: black;} pour que p suivant h3 soit black
