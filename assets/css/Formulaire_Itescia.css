@@ -12,48 +12,6 @@ body
    text-align: center;
 }
 
-
-nav
-{
-	height: 50px;
-	background-color: #57B0E3;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	padding: 20px;
-
-}
-
-
-nav a {
-	line-height: 50px;
-	word-spacing: 5em;
-	border: groove;
-	border-color: black;
-	margin-right: 20px;
-	margin-left: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
-	background-color: white;
-
-}
-
-
-nav a:hover
-{
-	background-color: rgb(230,230, 230);
-	border-radius: 100px/20px;
-}
-
-
-nav a:active
-{
-	background-color: rgb(200,200, 200);
-}
-
-
 p, em, strong
 {
 	color: black;
@@ -69,16 +27,72 @@ p, em, strong
 
 
 
+/*partie nav*/
+nav
+{
+	height: 50px;
+	background-color: #57B0E3;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	padding: 20px;
+
+}
+
+nav a {
+	width: 10%;
+	line-height: 50px;
+	word-spacing: 5em;
+	border: groove;
+	border-color: black;
+	color: black;
+
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: white;
+	transition-property: background-color, border-radius, width, color;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+
+nav a:hover
+{
+	background-color: rgb(220,220, 220);
+	border-radius: 80px /20px;
+	width: 20%;
+}
+
+nav a:visited
+{
+	color: red;
+}
+
+nav a:active
+{
+	background-color: rgb(170,170, 230);
+	color: black;
+}
+
+
+
+
+
+
+
 
 /*partir formulaire*/
 form
 {
 	display: flex;
 	flex-direction: column;
-
 }
 
-
+/*separation en deux colonne*/
 .conteneur_formulaire
 {
 	display: flex;
@@ -86,17 +100,24 @@ form
 	justify-content: space-around;
 }
 
+/*marge entre les deux colonne*/
+.premiere_formation
+{
+	margin-right: 10px;
+}
 
-
-
-/*2eme colonne  (coordonnées, scolarité...)*/
 .autres_informations
 {
-	background: grey;
+	background: lightgrey;
+	margin-left: 10px;
 }
 
 
-.autres_info_conteneur, .premiere_formation
+
+
+
+/* colonne  (permiere formation ou coordonnées, scolarité...)*/
+.autres_info_conteneur, .premiere_formation_text, .premiere_formation
 {
 	background-color: lightgrey;
 	display: flex;
@@ -104,7 +125,8 @@ form
 	padding: 20px;
 }
 
-.autres_info_conteneur p
+/*aligne les paragraphes sur le bord gauche*/
+.autres_info_conteneur p, .premiere_formation_text p
 {
 	align-self: flex-start;
 }
@@ -117,21 +139,12 @@ h2
 }
 
 
-p.gestion
-{
-	background-color: green;
-}
-
 .bac
 {
 	color: red;
-	background-color: blue;
-}
-
-
-.premiere_formation strong
-{
-	color : black;
+	font-size: 20px;
+	font-family: Verdana;
+	margin-bottom: 5px;
 }
 
 
@@ -139,32 +152,36 @@ p.gestion
 {
 	width: 80px;
 	height: auto;
-	align-self:  flex-start;
 }
 
 
 
-.premiere_formation p
+
+.conteneur_formation, .conteneur_bouton
 {
-	color: black;
-	background-color: pink;
-	align-self: flex-start;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	padding: 20px;
 }
 
-
-
+.conteneur_formation
+{
+	background-color: grey;
+}
 
 
 .conteneur_bouton
 {
-	padding: 20px;
-	display: flex;
-	flex-direction: row;
 	justify-content: center;
 }
 
 
 
+
+
+
+/*partie footer*/
 footer
 {
 	height: 100px;
