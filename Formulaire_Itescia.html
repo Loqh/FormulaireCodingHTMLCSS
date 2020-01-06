@@ -30,111 +30,363 @@
 
 
 <body>
-	<section class="premiere_formation">
-		<h2 class="gestion">Votre 1er choix de formation à ITESCIA :</h2>
 
+	<form method="post">
+		<p>
+			<label for="date_de_saisie">Date :</label>
+			<input type="date" name="date_de_saisie">
+			<label for="evenement">Evénement :</label>
+			<input type="text" name="evenement">
+		</p>
 		<!-- Gestion -->
 		<p>	<img src="assets/images/image_gestion_transparent.png" alt="" id="img_gestion"> </p>
 
 		<p class="gestion">
-			bac+2 :
+			<div class="bac">
+				bac+2 :
+			</div>
+			<input type="checkbox" name="BTS CG">
+			<strong>BTS CG</strong>
+		</p>
+
+
+		<p class="gestion">
+			<div class="bac">
+				bac+3 :
+			</div>
+			<strong>DCG</strong></br>
+			<input type="checkbox" name="DCG_L1">
+			entrée en L1
+			<input type="checkbox" name="DCG_L2">
+			entrée en L2
 		</p>
 
 		<p class="gestion">
-			bac+3 :
+			<div class="bac">
+				bac+4 :
+			</div>
+			<strong>Contrôleur de Gestion:</strong></br>
+			<input type="checkbox" name="controleur_L3">
+			entrée en L3
+			<input type="checkbox" name="controleur_M1">
+			entrée en M1
 		</p>
 
 		<p class="gestion">
-			bac+4 :
-			</br>
-			<strong>
-				Contrôleur de Gestion :
-			</strong>
-		</p>
-
-		<p class="gestion">
-			bac+5 :
+			<div class="bac">
+				bac+5 :
+			</div>
+			<input type="checkbox" name="DSCG">
+			<strong>DCSG</strong> (entrée en M1)
 		</p>
 
 
 		<!-- Management -->
 		<p>	<img src="assets/images/image_management_transparent.png" alt="" id="img_management"> </p>
 		<p class="management">
-			bac+4 :
-			<br/>
-			<strong>
-				Responsable de systèmes de management QHSE
-			</strong>
-			<br/>
-			<strong>
+			<div class="bac">
+				bac+4 :
+			</div>
+		<strong>
+			Responsable de systèmes de management QHSE
+		</strong>
+		<br/>
+		<input type="checkbox" name="rsm_L3">entrée en L3
+		<input type="checkbox" name="rsm_M1">entrée en M1
+		</br>
+		<strong>
 				Responsable Ressources Humaines
-			</strong>
+		</strong>
+		</br>
+		<input type="checkbox" name="rrh_L3">entrée en L3
+		<input type="checkbox" name="rrh_M1">entrée en M1
 		</p>
 
 		<p class="management">
-			bac+5 :
+			<div class="bac">
+				bac+5 :
+			</div>
+			<input type="checkbox" name="mqpi"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)
 		</p>
 
 
 		<!-- Informatique -->
 		<p>	<img src="assets/images/image_informatique_transparent.png" alt="" id="img_informatique"> </p>
 		<p class="informatique">
-			bac+2 :
-		</p>
-
-		<p class="informatique">
-			bac+3 (en 1 an) :
-		</p>
-
-		<p class="informatique">
-			bac+5 :
+			<div class="bac">
+				bac+2:
+			</div>
+			<input type="checkbox" name="bts_sio"><strong>BTS SIO, option SISR ou SLAM</strong>
 			<br/>
-			<strong>
-				Manager en Ingénierie Informatique
-			</strong>
+			<input type="checkbox" name="codeur_informatique"><strong>Codeur informatique :</strong>
+			<br/>
+			<strong>En 2 ans en alternance</strong>
+			<input type="radio" id="cergy" name="info_tp_1"><label for="cergy">à Cergy</label>
+			<input type="radio" id="paris" name="info_tp_1"><label for="paris">à Paris</label>
+			<br/>
+			<strong>En 1 an en temps plein</strong> (payant)
+			<input type="radio" id="cergy" name="info_tp_1"><label for="cergy">à Cergy</label>
+			<input type="radio" id="paris" name="info_tp_1"><label for="paris">à Paris</label>
+
+		</p>
+
+		<p class="informatique">
+			<div class="bac">
+				bac+3 (en 1 an) :
+			</div>
+			<input type="checkbox" name="lig"><strong>Licence d'Informatique générale</strong><br/>
+			<input type="checkbox" name="cdsmc"><strong>Concepteur développeur de solution mobiles et connectées</strong><br/>
+			<strong>En alternance</strong>
+			<input type="checkbox" id="cergy" name="cergy"><label for="cergy">à Cergy</label><br/>
+			<strong>En temps plein</strong> (payant)
+				<input type="checkbox" id="paris" name="paris"><label for="paris">à Paris</label><br/>
+		</p>
+
+		<p class="informatique">
+			<div class="bac">
+				bac+5 :
+			</div>
+			<strong>Manager en Ingénierie Informatique</strong>
+			<input type="checkbox" id="l3" name="mii"><label for="l3">entrée en L3</label>
+			<input type="checkbox" id="m1" name="mii"><label for="m1">entrée en M1, spécialisation</label><br/>
+			<input type="checkbox" id="msc_c" name="mii"><label for="msc_c"><strong>MSc Cybersécurité</strong></label><br/>
+			<input type="checkbox" id="msc_rs" name="mii"><label for="msc_rs"><strong>MSc Réseaux & Systèmes</strong></label><br/>
+			<input type="checkbox" id="msc_bc" name="mii"><label for="msc_bc"><strong>MSc Big data & cloud</strong></label><br/>
+			<input type="checkbox" id="msc_gs" name="mii"><label for="msc_gs"><strong>MSc Gaming & Smart Tech</strong></label><br/>
+			<input type="checkbox" id="msc_md" name="mii"><label for="msc_md"><strong>MSc Management des SI & Digitalisation</strong></label><br/>
+			<input type="checkbox" id="i_ls" name="mii"><label for="i_ls"><strong>Ingénierie Logiciels et Systèmes</strong></label><br/>
+			<input type="checkbox" id="i_aa" name="mii"><label for="i_aa"><strong>Intelligence Artificielle et Applications</strong></label><br/>
+			<input type="checkbox" id="m2" name="mii"><label for="m2">entrée en M2, spécialisation :</label><br/>
+			<input type="checkbox" id="msc_ei" name="mii"><label for="msc_ei"><strong>MSc Entrepreneuriat & IT</strong></label><br/>
+			<input type="checkbox" id="msc_ibi" name="mii"><label for="msc_ibi"><strong>MSc International Business for IT</strong></label><br/>
+			<strong>Business Analyste (M1 + M2)</strong><br/>
+			<input type="checkbox" id="msc_psi" name="mii"><label for="msc_psi">Performance et systèmes d'information</label><br/>
+			<input type="checkbox" id="msc_drh" name="mii"><label for="msc_drh">Digitalisation RH</label><br/>
 		</p>
 
 	</section>
-
-
-	<section class="coordonnées">
 
 		<h2 class="gestion">Vos coordonnées :</h2>
-		<p class="gestion"></p>
+		<p class="gestion">bac+2</p>
 
-	</section>
+		<section class="coordonnées">
+
+			<h2 class="coordonnées">Vos coordonnées :</h2>
+			<p>
+				<label for="sexe">sexe :</label>
+				<select name="sexe" id="sexe" >
+					<option value="1">Homme</option>
+					<option value="2">Femme</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="nom">Nom :</label>
+				<input type="text" name="nom">
+			</p>
+
+			<p>
+				<label for="prenom">Prenom :</label>
+				<input type="text" name="prenom">
+			</p>
+
+			<p>
+				<label for="adresse">Adresse :</label>
+				<input type="text" name="adresse">
+			</p>
+
+			<p>
+				<label for="code_postal">CP :</label>
+				<input type="text" name="code_postal">
+				<label for="ville">Ville :</label>
+				<input type="text" name="ville">
+			</p>
+
+			<p>
+				<label for="tel_fixe">Tél. fixe :</label>
+				<input type="tel" name="tel_fixe">
+			</p>
+
+			<p>
+				<label for="portable">Portable :</label>
+				<input type="tel" name="portable">
+			</p>
+
+			<p>
+				<label for="email">E-mail :</label>
+				<input type="email" name="email">
+			</p>
+
+			<p>
+				<label for="date_naissance">Date de naissance :</label>
+				<input type="date" name="date_naissance">
+			</p>
+
+			<p>
+				<label for="nationalite">Nationalité :</label>
+				<select name="nationalité" id="nationalite">
+					<option value="1">Française</option>
+					<option value="2">UE</option>
+					<option value="2">Hors UE</option>
+				</select>
+			</p>
+
+		</section>
 
 
-	<section class="scolarité">
+		<section class="scolarité">
 
-		<h2 class="gestion">Votre scolarité :</h2>
-		<p class="gestion"></p>
+			<h2 class="scolarité">Votre scolarité :</h2>
 
-	</section>
+			<p>
+				<label for="niveau">Niveau de formation actuel :</label>
+				<input type="text" name="niveau">
+			</p>
 
+			<p>
+				<label for="etablissement">Etablissement actuel (nom et ville) :</label>
+				<input type="text" name="etablissement">
+			</p>
 
-	<section class="souhaits">
+			<p>
+				<label for="diplome">Dernier diplôme obtenu :</label>
+				<input type="email" name="diplome">
+			</p>
 
-		<h2 class="gestion">Vos autres souhaits de formation à ITESCIA :</h2>
-		<p class="gestion"></p>
-
-	</section>
-
-
-	<section class="parrain">
-
-		<h2 class="gestion">Votre parrain à ITESCIA :</h2>
-		<p class="gestion"></p>
-
-	</section>
+		</section>
 
 
-	<section class="votre_formation">
+		<section class="souhaits">
 
-		<h2 class="gestion">Formation continue & votre formation :</h2>
-		<p class="gestion"></p>
+			<h2 class="souhaits">Vos autres souhaits de formation à ITESCIA :</h2>
 
-	</section>
+			<p>
+				<label for="souhait_2">N°2 :</label>
+				<select name="souhait_2" id="souhait_2">
+					<option value="1">L1</option>
+					<option value="2">L2</option>
+					<option value="2">L3</option>
+					<option value="2">M1</option>
+					<option value="2">M2</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="souhait_3">N°3 :</label>
+				<select name="souhait_3" id="souhait_3">
+					<option value="1">L1</option>
+					<option value="2">L2</option>
+					<option value="2">L3</option>
+					<option value="2">M1</option>
+					<option value="2">M2</option>
+				</select>
+			</p>
+		</section>
+
+
+		<section class="parrain">
+
+			<h2 class="parrain">Votre parrain à ITESCIA :</h2>
+
+			<p>
+				<label for="parrain_nom">Nom :</label>
+				<input type="text" name="parrain_nom">
+			</p>
+
+			<p>
+				<label for="parrain_prenom">Prénom :</label>
+				<input type="text" name="parrain_prenom">
+			</p>
+
+			<p>
+				<label for="formation_parrain">Formation suivie :</label>
+				<input type="text" name="formation_parrain">
+			</p>
+
+		</section>
+
+
+		<section class="votre_formation">
+
+			<h2 class="formation">Formation continue :</h2>
+
+			<p>
+				Contrôleur de Gestion
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="formation_controleur">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_controleur">
+
+			</p>
+
+			<p>
+				Responsable Management QHSE :
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="formation_QHSE">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_QHSE">
+
+			</p>
+
+			<p>
+				Manager en Ingénierie Informatique :
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="ingenierie_informatique">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="ingenierie_informatique">
+
+			</p>
+
+			<p>
+				Business Analyst :
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_analyst">
+
+			</p>
+
+			<p>
+				Manager de la sécurité des risques de l’information :
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_securite">
+
+			</p>
+
+
+
+			<h2 class="formation">votre Situation :</h2>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Salarié(e), de l'entreprise :</label>
+				<input type="text" name="situation_salarie"></section>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Demandeur d'emploi:</label>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Particulier :</label>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Autre :</label>
+				<input type="text" name="situation_autre">
+			</p>
+
+		</section>
+
+
+
+		<!--<input type="email" name="mail" /> permet de saisir du texte-->
+
+		<input type="submit" name="bouton_valider"> <!-- pour un bouton tel que valider les modif-->
+		<input type="reset" name="bouton_reinitialiser">
+
+	</form>
 
 </body>
 

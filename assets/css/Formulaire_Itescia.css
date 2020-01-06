@@ -1,15 +1,16 @@
 /*
 */
 
-p, em, strong
-{
-	color: blue;
-}
 
 /*pour toute balise p contenu dans objet class ="premiere_formation*/
 .premiere_formation p
 {
-	color: red;
+	color: black;
+}
+
+.bac
+{
+ 		color : red;
 }
 
 .premiere_formation strong
