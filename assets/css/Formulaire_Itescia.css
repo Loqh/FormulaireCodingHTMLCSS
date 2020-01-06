@@ -12,6 +12,12 @@ p, em, strong
 	color: red;
 }
 
+.premiere_formation strong
+{
+	color : black;
+}
+
+
 .premiere_formation img
 {
 	width: 80px;
@@ -26,4 +32,3 @@ p.gestion, p.management, p.informatique
 	color: red;
 }
 */
-
