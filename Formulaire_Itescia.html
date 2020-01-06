@@ -12,15 +12,17 @@
 
 
 <header>
-	<center><p><img src="assets/images/itescia.png" id="logo" border="1px" ></p>
-	<h1>
-			Formulaire de contact
-		</h1></center>
+	<p><img src="assets/images/itescia.png" height="100"></p>
+
 	<nav>
-		<center>
-			<a href="Formulaire_Itescia.html" title="Afficher l'accueil">Accueil</a>
-			<a href="https://www.itescia.fr/" title="Aller sur itescia.fr">Itescia</a>
-		</center>
+		<ul>
+			<li><a href="Formulaire_Itescia.html" title="acceder à l'accueil">Accueil</a></li>
+			<li><a href="https://www.itescia.fr/" title="allez sur itescia.fr">Itescia</a></li>
+		</ul>
+
+		<h1>
+			Formulaire de contact
+		</h1>
 	</nav>
 </header>
 
@@ -30,6 +32,10 @@
 <body>
 <center>
 	<form method="post">
+		<h1>
+			Formulaire de contact
+		</h1>
+
 		<p>
 			<label for="date_de_saisie">Date :</label>
 			<input type="date" id="date_de_saisie" name="date_de_saisie">
@@ -56,7 +62,7 @@
 				<div class="bac">
 					bac+3 :
 				</div>
-				<strong>DCG</strong></br>
+				<strong>DCG</strong><br/>
 				<input type="checkbox" id="DCG_L1" name="DCG_L1">
 				<label for="DCG_L1">entrée en L1</label>
 				<input type="checkbox" id="DCG_L2" name="DCG_L2">
@@ -67,7 +73,7 @@
 				<div class="bac">
 					bac+4 :
 				</div>
-				<strong>Contrôleur de Gestion:</strong></br>
+				<strong>Contrôleur de Gestion:</strong><br/>
 				<input type="checkbox" id="controleur_L3" name="controleur_L3">
 				<label for="controleur_L3">entrée en L3</label>
 				<input type="checkbox" id="controleur_M1" name="controleur_M1">
@@ -118,7 +124,8 @@
 				<div class="bac">
 					bac+5 :
 				</div>
-				<input type="checkbox" id="mqpi" name="mqpi"><label for="mqpi"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
+				<input type="checkbox" id="mqpi" name="mqpi">
+				<label for="mqpi"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
 			</p>
 
 
@@ -128,17 +135,21 @@
 				<div class="bac">
 					bac+2:
 				</div>
-				<input type="checkbox" name="bts_sio"><strong>BTS SIO, option SISR ou SLAM</strong>
-				<br/>
-				<input type="checkbox" name="codeur_informatique"><strong>Codeur informatique :</strong>
-				<br/>
+				<input type="checkbox" id="bts_sio" name="bts_sio">
+				<label for="bts_sio"><strong>BTS SIO, option SISR ou SLAM</strong></label><br/>
+
+				<input type="checkbox" id="codeur_informatique" name="codeur_informatique">
+				<label for="codeur_informatique"><strong>Codeur informatique :</strong></label><br/>
+
 				<strong>En 2 ans en alternance</strong>
-				<input type="radio" id="cergy" name="info_tp_1"><label for="cergy">à Cergy</label>
-				<input type="radio" id="paris" name="info_tp_1"><label for="paris">à Paris</label>
+				<input type="radio" id="cergy_bac2_alt" name="bac2_info_alt">
+				<label for="cergy_bac2_alt">à Cergy</label>
+				<input type="radio" id="paris_bac2_alt" name="bac2_info_alt">
+				<label for="paris_bac2_alt">à Paris</label>
 				<br/>
 				<strong>En 1 an en temps plein</strong> (payant)
-				<input type="radio" id="cergy" name="info_tp_1"><label for="cergy">à Cergy</label>
-				<input type="radio" id="paris" name="info_tp_1"><label for="paris">à Paris</label>
+				<input type="radio" id="cergy_bac2_tp" name="bac2_info_tp"><label for="cergy_bac2_tp">à Cergy</label>
+				<input type="radio" id="paris_bac2_tp" name="bac2_info_tp"><label for="paris_bac2_tp">à Paris</label>
 
 			</p>
 
@@ -146,33 +157,70 @@
 				<div class="bac">
 					bac+3 (en 1 an) :
 				</div>
-				<input type="checkbox" name="lig"><strong>Licence d'Informatique générale</strong><br/>
-				<input type="checkbox" name="cdsmc"><strong>Concepteur développeur de solution mobiles et connectées</strong><br/>
+				<input type="checkbox" id="lig" name="lig">
+				<label for="lig"><strong>Licence d'Informatique générale</strong></label><br/>
+
+				<input type="checkbox" id="cdsmc" name="cdsmc">
+				<label for="cdsmc"><strong>Concepteur développeur de solution mobiles et connectées</strong></label><br/>
+
 				<strong>En alternance</strong>
-				<input type="checkbox" id="cergy" name="cergy"><label for="cergy">à Cergy</label><br/>
+				<input type="checkbox" id="cergy_bac3_alt" name="cergy">
+				<label for="cergy_bac3_alt">à Cergy</label><br/>
+
 				<strong>En temps plein</strong> (payant)
-					<input type="checkbox" id="paris" name="paris"><label for="paris">à Paris</label><br/>
+					<input type="checkbox" id="paris_bac3_tp" name="paris">
+					<label for="paris_bac3_tp">à Paris</label><br/>
 			</p>
+
 
 			<p class="informatique">
 				<div class="bac">
 					bac+5 :
 				</div>
 				<strong>Manager en Ingénierie Informatique</strong>
-				<input type="checkbox" id="l3" name="mii"><label for="l3">entrée en L3</label>
-				<input type="checkbox" id="m1" name="mii"><label for="m1">entrée en M1, spécialisation</label><br/>
-				<input type="checkbox" id="msc_c" name="mii"><label for="msc_c"><strong>MSc Cybersécurité</strong></label><br/>
-				<input type="checkbox" id="msc_rs" name="mii"><label for="msc_rs"><strong>MSc Réseaux & Systèmes</strong></label><br/>
-				<input type="checkbox" id="msc_bc" name="mii"><label for="msc_bc"><strong>MSc Big data & cloud</strong></label><br/>
-				<input type="checkbox" id="msc_gs" name="mii"><label for="msc_gs"><strong>MSc Gaming & Smart Tech</strong></label><br/>
-				<input type="checkbox" id="msc_md" name="mii"><label for="msc_md"><strong>MSc Management des SI & Digitalisation</strong></label><br/>
-				<input type="checkbox" id="i_ls" name="mii"><label for="i_ls"><strong>Ingénierie Logiciels et Systèmes</strong></label><br/>
-				<input type="checkbox" id="i_aa" name="mii"><label for="i_aa"><strong>Intelligence Artificielle et Applications</strong></label><br/>
-				<input type="checkbox" id="m2" name="mii"><label for="m2">entrée en M2, spécialisation :</label><br/>
-				<input type="checkbox" id="msc_ei" name="mii"><label for="msc_ei"><strong>MSc Entrepreneuriat & IT</strong></label><br/>
-				<input type="checkbox" id="msc_ibi" name="mii"><label for="msc_ibi"><strong>MSc International Business for IT</strong></label><br/>
+
+				<input type="checkbox" id="l3" name="mii">
+				<label for="l3">entrée en L3</label>
+				<input type="checkbox" id="m1" name="mii">
+				<label for="m1">entrée en M1, spécialisation</label><br/>
+
+				<input type="checkbox" id="msc_c" name="mii">
+				<label for="msc_c"><strong>MSc Cybersécurité</strong></label><br/>
+
+				<input type="checkbox" id="msc_rs" name="mii">
+				<label for="msc_rs"><strong>MSc Réseaux & Systèmes</strong></label><br/>
+
+				<input type="checkbox" id="msc_bc" name="mii">
+				<label for="msc_bc"><strong>MSc Big data & cloud</strong></label><br/>
+
+				<input type="checkbox" id="msc_gs" name="mii">
+				<label for="msc_gs"><strong>MSc Gaming & Smart Tech</strong></label><br/>
+
+				<input type="checkbox" id="msc_md" name="mii">
+				<label for="msc_md"><strong>MSc Management des SI & Digitalisation</strong></label><br/>
+
+				<input type="checkbox" id="i_ls" name="mii">
+				<label for="i_ls"><strong>Ingénierie Logiciels et Systèmes</strong></label><br/>
+
+				<input type="checkbox" id="i_aa" name="mii">
+				<label for="i_aa"><strong>Intelligence Artificielle et Applications</strong></label><br/>
+
+				<input type="checkbox" id="m2" name="mii">
+				<label for="m2">entrée en M2, spécialisation :</label><br/>
+
+				<input type="checkbox" id="msc_ei" name="mii">
+				<label for="msc_ei"><strong>MSc Entrepreneuriat & IT</strong></label><br/>
+
+				<input type="checkbox" id="msc_ibi" name="mii">
+				<label for="msc_ibi"><strong>MSc International Business for IT</strong></label><br/>
+
+
+
 				<strong>Business Analyste (M1 + M2)</strong><br/>
-				<input type="checkbox" id="msc_psi" name="mii"><label for="msc_psi">Performance et systèmes d'information</label><br/>
+
+				<input type="checkbox" id="msc_psi" name="mii">
+				<label for="msc_psi">Performance et systèmes d'information</label><br/>
+
 				<input type="checkbox" id="msc_drh" name="mii"><label for="msc_drh">Digitalisation RH</label><br/>
 			</p>
 
@@ -390,9 +438,6 @@
 
 		</section>
 
-
-
-		<!--<input type="email" name="mail" /> permet de saisir du texte-->
 
 		<input type="submit" name="bouton_valider"> <!-- pour un bouton tel que valider les modif-->
 		<input type="reset" name="bouton_reinitialiser">
