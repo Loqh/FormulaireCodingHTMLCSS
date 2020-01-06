@@ -6,13 +6,24 @@ p, em, strong
 	color: blue;
 }
 
-p.gestion, p.management, p.informatique
+/*pour toute balise p contenu dans objet class ="premiere_formation*/
+.premiere_formation p
 {
 	color: red;
 }
 
-
-#img_gestion
+.premiere_formation img
 {
-
+	width: 80px;
+	height: auto;
 }
+
+/* h3 + p {color: black;} pour que p suivant h3 soit black
+a[title]  pour tout lien <a> avec un attribut title, si on veut preciser lequel exactement => a[title="le titre donné"]
+
+p.gestion, p.management, p.informatique
+{
+	color: red;
+}
+*/
+
