@@ -32,6 +32,10 @@
 <body>
 
 	<form method="post">
+		<p>
+			<input type="date" name="date_de_saisie"> 
+			<input type="text" name="evenement">
+		</p>
 		<section class="premiere_formation">
 			<h2 class="gestion">Votre 1er choix de formation à ITESCIA :</h2>
 
@@ -100,40 +104,210 @@
 
 		<section class="coordonnées">
 
-			<h2 class="gestion">Vos coordonnées :</h2>
-			<p class="gestion">bac+2</p>
+			<h2 class="coordonnées">Vos coordonnées :</h2>
+			<p>
+				<label for="sexe">sexe :</label>
+				<select name="sexe" id="sexe" >
+					<option value="1">Mme</option>
+					<option value="2">M</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="nom">Nom :</label>
+				<input type="text" name="nom">
+			</p>
+
+			<p>
+				<label for="prenom">Prenom :</label>
+				<input type="text" name="prenom">
+			</p>
+
+			<p>
+				<label for="adresse">Adresse :</label>
+				<input type="text" name="adresse">
+			</p>
+
+			<p>
+				<label for="code_postal">CP :</label>
+				<input type="text" name="code_postal">
+				<label for="ville">Ville :</label>
+				<input type="text" name="ville">
+			</p>
+
+			<p>
+				<label for="tel_fixe">Tél. fixe :</label>
+				<input type="text" name="tel_fixe">
+			</p>
+
+			<p>
+				<label for="portable">Portable :</label>
+				<input type="text" name="portable">
+			</p>
+
+			<p>
+				<label for="email">E-mail :</label>
+				<input type="email" name="email">
+			</p>
+
+			<p>
+				<label for="date_naissance">Date de naissance :</label>
+				<input type="date" name="date_naissance">
+			</p>
+
+			<p>
+				<label for="nationalite">Nationalité :</label>
+				<select name="nationalité" id="nationalite">
+					<option value="1">Française</option>
+					<option value="2">UE</option>
+					<option value="2">Hors UE</option>
+				</select>
+			</p>
 
 		</section>
 
 
 		<section class="scolarité">
 			
-			<h2 class="gestion">Votre scolarité :</h2>
-			<p class="gestion">bac+2</p>
+			<h2 class="scolarité">Votre scolarité :</h2>
 
+			<p>
+				<label for="niveau">Niveau de formation actuel :</label>
+				<input type="text" name="niveau">
+			</p>
+
+			<p>
+				<label for="etablissement">Etablissement actuel (nom et ville) :</label>
+				<input type="text" name="etablissement">
+			</p>
+
+			<p>
+				<label for="diplome">Dernier diplôme obtenu :</label>
+				<input type="email" name="diplome">
+			</p>
+		
 		</section>
 
 
 		<section class="souhaits">
 			
-			<h2 class="gestion">Vos autres souhaits de formation à ITESCIA :</h2>
-			<p class="gestion">bac+2</p>
+			<h2 class="souhaits">Vos autres souhaits de formation à ITESCIA :</h2>
 
+			<p>
+				<label for="souhait_2">N°2 :</label>
+				<select name="souhait_2" id="souhait_2">
+					<option value="1">L1</option>
+					<option value="2">L2</option>
+					<option value="2">L3</option>
+					<option value="2">M1</option>
+					<option value="2">M2</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="souhait_3">N°3 :</label>
+				<select name="souhait_3" id="souhait_3">
+					<option value="1">L1</option>
+					<option value="2">L2</option>
+					<option value="2">L3</option>
+					<option value="2">M1</option>
+					<option value="2">M2</option>
+				</select>
+			</p>
 		</section>
 
 
 		<section class="parrain">
 			
-			<h2 class="gestion">Votre parrain à ITESCIA :</h2>
-			<p class="gestion">bac+2</p>
+			<h2 class="parrain">Votre parrain à ITESCIA :</h2>
+
+			<p>
+				<label for="parrain_nom">Nom :</label>
+				<input type="text" name="parrain_nom">
+			</p>
+
+			<p>
+				<label for="parrain_prenom">Prénom :</label>
+				<input type="text" name="parrain_prenom">
+			</p>
+
+			<p>
+				<label for="formation_parrain">Formation suivie :</label>
+				<input type="text" name="formation_parrain">
+			</p>
 
 		</section>
 
 
 		<section class="votre_formation">
 			
-			<h2 class="gestion">Formation continue & votre formation :</h2>
-			<p class="gestion">bac+2</p>
+			<h2 class="formation">Formation continue :</h2>
+
+			<p>
+				Contrôleur de Gestion
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="formation_controleur">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_controleur">
+
+			</p>
+
+			<p>
+				Responsable Management QHSE :
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="formation_QHSE">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_QHSE">
+
+			</p>
+
+			<p>
+				Manager en Ingénierie Informatique :
+				<label for="VAE">VAE :</label>
+				<input type="radio" id="VAE" name="ingenierie_informatique">
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="ingenierie_informatique">
+
+			</p>
+
+			<p>
+				Business Analyst :
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_analyst">
+
+			</p>
+
+			<p>
+				Manager de la sécurité des risques de l’information :
+				<label for="Part_time">Part-time :</label>
+				<input type="radio" id="Part_time" name="formation_securite">
+
+			</p>
+
+
+			<h2 class="formation">votre Situation :</h2>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Salarié(e), de l'entreprise :</label>
+				<input type="text" name="situation_salarie"></section>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Demandeur d'emploi:</label>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Particulier :</label>
+			</p>
+
+			<p>
+				<input type="radio" name="situation">
+				<label for="Part_time">Autre :</label>
+				<input type="text" name="situation_autre">
+			</p>
 
 		</section>
 
