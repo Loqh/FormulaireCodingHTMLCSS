@@ -110,8 +110,8 @@
 			<p>
 				<label for="sexe">sexe :</label>
 				<select name="sexe" id="sexe" >
-					<option value="1">Mme</option>
-					<option value="2">M</option>
+					<option value="1">Homme</option>
+					<option value="2">Femme</option>
 				</select>
 			</p>
 
@@ -139,12 +139,12 @@
 
 			<p>
 				<label for="tel_fixe">Tél. fixe :</label>
-				<input type="text" name="tel_fixe">
+				<input type="tel" name="tel_fixe">
 			</p>
 
 			<p>
 				<label for="portable">Portable :</label>
-				<input type="text" name="portable">
+				<input type="tel" name="portable">
 			</p>
 
 			<p>
@@ -287,6 +287,7 @@
 			</p>
 
 
+
 			<h2 class="formation">votre Situation :</h2>
 
 			<p>
@@ -313,9 +314,13 @@
 
 		</section>
 
+
+
 		<!--<input type="email" name="mail" /> permet de saisir du texte-->
 
-		<input type="submit" name="valider"> <!-- pour un bouton tel que valider les modif-->
+		<input type="submit" name="bouton_valider"> <!-- pour un bouton tel que valider les modif-->
+		<input type="reset" name="bouton_reinitialiser"> 
+
 	</form>
 
 </body>
