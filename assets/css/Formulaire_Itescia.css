@@ -12,37 +12,66 @@ body
    text-align: center;
 }
 
+
 nav
 {
 	height: 50px;
 	background-color: #57B0E3;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
-	padding: 10px;
+	align-content: center;
+	padding: 20px;
 
 }
+
+
 nav a {
 	line-height: 50px;
 	word-spacing: 5em;
-	margin: 10px;
+	border: groove;
+	border-color: black;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: white;
+
 }
+
+
+nav a:hover
+{
+	background-color: rgb(230,230, 230);
+	border-radius: 100px/20px;
+}
+
+
+nav a:active
+{
+	background-color: rgb(200,200, 200);
+}
+
 
 footer
 {
 	height: 100px;
 	background-color: #57B0E3
-
 }
+
+
 footer p
 {
 	line-height: 100px;
 }
 
+
 p, em, strong
 {
 	color: blue;
 }
+
 
 #logo
 {
@@ -51,16 +80,19 @@ p, em, strong
 	border-color: black;
 }
 
+
 /*pour toute balise p contenu dans objet class ="premiere_formation*/
 .premiere_formation p
 {
 	color: black;
 }
 
+
 .bac
 {
  		color : red;
 }
+
 
 .premiere_formation strong
 {
