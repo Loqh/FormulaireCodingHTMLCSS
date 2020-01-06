@@ -34,9 +34,9 @@
 	<form method="post">
 		<p>
 			<label for="date_de_saisie">Date :</label>
-			<input type="date" name="date_de_saisie">
+			<input type="date" id="date_de_saisie" name="date_de_saisie">
 			<label for="evenement">Evénement :</label>
-			<input type="text" name="evenement">
+			<input type="text" id="evenement" name="evenement">
 		</p>
 
 		<section class="premiere_formation">
@@ -49,8 +49,8 @@
 				<div class="bac">
 					bac+2 :
 				</div>
-				<input type="checkbox" name="BTS CG">
-				<strong>BTS CG</strong>
+				<input type="checkbox" id="BTS_CG" name="BTS CG">
+				<label for="BTS_CG"><strong>BTS CG</strong></label>
 			</p>
 
 
@@ -59,10 +59,10 @@
 					bac+3 :
 				</div>
 				<strong>DCG</strong></br>
-				<input type="checkbox" name="DCG_L1">
-				entrée en L1
-				<input type="checkbox" name="DCG_L2">
-				entrée en L2
+				<input type="checkbox" id="DCG_L1" name="DCG_L1">
+				<label for="DCG_L1">entrée en L1</label>
+				<input type="checkbox" id="DCG_L2" name="DCG_L2">
+				<label for="DCG_L2">entrée en L2</label>
 			</p>
 
 			<p class="gestion">
@@ -70,10 +70,10 @@
 					bac+4 :
 				</div>
 				<strong>Contrôleur de Gestion:</strong></br>
-				<input type="checkbox" name="controleur_L3">
-				entrée en L3
-				<input type="checkbox" name="controleur_M1">
-				entrée en M1
+				<input type="checkbox" id="controleur_L3" name="controleur_L3">
+				<label for="controleur_L3">entrée en L3</label>
+				<input type="checkbox" id="controleur_M1" name="controleur_M1">
+				<label for="controleur_M1" >entrée en M1</label>
 			</p>
 
 			<p class="gestion">
