@@ -1,6 +1,47 @@
 /*
 */
 
+body
+{
+   background-image: url("https://pics.me.me/yeah-boi-krigoi-twitter-51757182.png");
+   background-repeat: no-repeat;
+   background-size: 1500px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+nav
+{
+	height: 50px;
+	background-color: #57B0E3
+
+}
+nav a {
+	line-height: 50px;
+	word-spacing: 5em;
+}
+
+footer
+{
+	height: 100px;
+	background-color: #57B0E3
+
+}
+footer p
+{
+	line-height: 100px;
+}
+
+p, em, strong
+{
+	color: blue;
+}
+
+#logo
+{
+	width: 100px;
+	background-color: white;
+	border-color: black;
+}
 
 /*pour toute balise p contenu dans objet class ="premiere_formation*/
 .premiere_formation p
