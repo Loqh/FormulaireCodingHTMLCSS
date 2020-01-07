@@ -1,11 +1,5 @@
-/*
-*/
-
 body
 {
-   /*background-image: url("https://pics.me.me/yeah-boi-krigoi-twitter-51757182.png");
-   background-repeat: no-repeat;
-   background-size: 1500px;*/
    font-family: Arial, Helvetica, sans-serif;
    margin-left: auto;
    margin-right: auto;
@@ -27,8 +21,11 @@ p, em, strong
 }
 
 
-
-/*partie nav*/
+/* 
+######################################################################################
+################################## partie nav  #######################################
+######################################################################################
+*/
 nav
 {
 	height: 50px;
@@ -85,15 +82,45 @@ nav a:active
 
 
 
-
-/*partir formulaire*/
+/* 
+######################################################################################
+############################### partie formulaire ####################################
+######################################################################################
+*/
 form
 {
 	display: flex;
 	flex-direction: column;
 }
 
-/*separation en deux colonne*/
+
+
+
+#conteneur_avant_information
+{
+	padding: 20px;
+	margin: 40px;
+	background-color: rgb(220, 220, 235);
+	border-radius: 20px/20px;
+	transition-property: background-color;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+#conteneur_avant_information:hover
+{
+	padding: 20px;
+	margin: 40px;
+	background-color: rgb(200, 200, 215);
+
+}
+
+
+/* 
+######################################################################################
+########################## separation en deux colonne) ##############################
+######################################################################################
+*/
 .conteneur_formulaire
 {
 	display: flex;
@@ -116,8 +143,25 @@ form
 
 
 
+/* 
+######################################################################################
+######################### bordure ronde pour colonne formulaire  #####################
+######################################################################################
+*/
+.autres_informations, .autres_info_conteneur,  .premiere_formation
+{
+	border-radius: 20px/20px;
+}
 
-/* colonne  (permiere formation ou coordonnées, scolarité...)*/
+
+
+
+
+/* 
+######################################################################################
+######### colonne  (permiere formation; ou coordonnées, scolarité, parrain...) #######
+######################################################################################
+*/
 .autres_info_conteneur, .premiere_formation_text, .premiere_formation
 {
 	background-color: rgb(220, 220, 235);
@@ -134,6 +178,7 @@ form
 	justify-content: flex-start;
 }
 
+/*met de l'espace entre les label et les element adjacent horizontalement*/
 p label
 {
 		padding-right: 10px;
@@ -141,7 +186,7 @@ p label
 }
 
 
-
+/*donne couleur bleu et centre les h2*/
 h2
 {
 	align-self: center;
@@ -149,6 +194,7 @@ h2
 }
 
 
+/*pour les element de classe bac (dans la colonne 1 : premiere formation)*/
 .bac
 {
 	color: red;
@@ -158,6 +204,7 @@ h2
 }
 
 
+/*pour les images gestion, management et informatique (dans la colonne 1 : premiere formation)*/
 .premiere_formation img
 {
 	width: 80px;
@@ -176,6 +223,8 @@ h2
 
 
 
+
+
 .conteneur_formation, .conteneur_bouton
 {
 	display: flex;
@@ -189,11 +238,7 @@ h2
 	background-color: rgb(220, 220, 235);
 }
 
-/*
-.conteneur_formation div
-{
-	background-color: blue;
-}*/
+
 .conteneur_formation div
 {
 	width: 80%;
@@ -204,9 +249,25 @@ h2
 	align-self: center;
 }
 
+
+
+
+/* 
+######################################################################################
+############################### conteneur bouton #####################################
+######################################################################################
+*/
 .conteneur_bouton
 {
 	justify-content: center;
+}
+
+.conteneur_bouton input
+{
+	width: 20%;
+	padding: 10px;
+	height: 30px;
+	margin: 20px;
 }
 
 
@@ -214,7 +275,11 @@ h2
 
 
 
-/*partie footer*/
+/* 
+######################################################################################
+################################## partie footer #####################################
+######################################################################################
+*/
 footer
 {
 	height: 100px;
@@ -226,12 +291,3 @@ footer p
 {
 	line-height: 100px;
 }
-
-/* h3 + p {color: black;} pour que p suivant h3 soit black
-a[title]  pour tout lien <a> avec un attribut title, si on veut preciser lequel exactement => a[title="le titre donné"]
-
-p.gestion, p.management, p.informatique
-{
-	color: red;
-}
-*/
