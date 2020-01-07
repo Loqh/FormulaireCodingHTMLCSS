@@ -125,19 +125,21 @@ form
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 /*marge entre les deux colonne*/
 .premiere_formation
 {
 	margin-right: 10px;
+	margin-left: 25px;
 }
 
 .autres_informations
 {
 	background: rgb(220, 220, 235);
 	margin-left: 10px;
+	margin-right: 25px;
 }
 
 
