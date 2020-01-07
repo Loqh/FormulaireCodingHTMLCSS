@@ -288,29 +288,6 @@ footer
 	align-content: center;
 }
 
-footer a
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	width: 60px;
-	margin-top:30px;
-	margin-bottom: 30px;
-}
-
-footer a figure
-{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-}
-
-footer p
-{
-	align-self: center;
-}
-
-
 
 .logo_footer
 {
@@ -325,11 +302,30 @@ footer p
 }
 
 
+
 #nav_footer
 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+
+#nav_footer a
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 60px;
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+#nav_footer a figure
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 
 
