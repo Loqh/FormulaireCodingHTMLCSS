@@ -129,7 +129,6 @@ form
 .autres_info_conteneur p, .premiere_formation_text p
 {
 	align-self: flex-start;
-	background-color: pink;
 	display: flex;
 	justify-content: flex-start;
 }
