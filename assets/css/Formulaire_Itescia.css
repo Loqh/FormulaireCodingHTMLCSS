@@ -10,6 +10,7 @@ body
 p, em, strong
 {
 	color: black;
+	word-wrap: break-word;
 }
 
 
@@ -29,15 +30,18 @@ p, em, strong
 #nav_header
 {
 	height: 50px;
-	background-color: #57B0E3;
+	background: linear-gradient(#57B0E3,#57B0B3  );
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	padding: 20px;
-
+	box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.15);
 }
+
+
+
 
 #nav_header a {
 	width: 10%;
@@ -51,10 +55,15 @@ p, em, strong
 	margin-left: 20px;
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: white;
+	background-color: rgb(250, 250, 250);
+	
 	transition-property: background-color, border-radius, width, color;
-	transition-duration: 1s;
+	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
+	
+	position: relative;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+
 }
 
 
@@ -77,8 +86,29 @@ p, em, strong
 }
 
 
+#nav_header a:after
+{
+	content: "";
+	position: absolute;
+	bottom: 10px; right: 30px; left: 30px;
+	height: 2px;
+	background: #B13C2E;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all .4s;
+}
 
+#nav_header a:hover:after, #nav_header a:focus:after
+{
+	background: black;
+	opacity: .6;
+	transform: translateY(0);
+}
 
+#nav_header a:focus
+{
+	outline: none;
+} 
 
 
 
@@ -100,18 +130,14 @@ form
 {
 	padding: 20px;
 	margin: 25px;
-	background-color: rgb(220, 220, 235);
+	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 205));
 	border-radius: 20px/20px;
-	transition-property: background-color;
+	transition-property: background;
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-#conteneur_avant_information:hover
-{
-	background-color: rgb(190, 190, 205);
-
-}
 
 
 
@@ -125,7 +151,9 @@ form
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
+	align-content: center;
+	padding-bottom: 20px;
 }
 
 /*marge entre les deux colonne*/
@@ -133,6 +161,7 @@ form
 {
 	margin-right: 10px;
 	margin-left: 25px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 .autres_informations
@@ -140,6 +169,7 @@ form
 	background: rgb(220, 220, 235);
 	margin-left: 10px;
 	margin-right: 25px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -194,13 +224,34 @@ p label
 input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select
 {
 	border-radius: 5px/5px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
+
+input[type="radio"]
+{
+	cursor: pointer;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+}
+
+label
+{
+	cursor: pointer;
+}
+
+
 
 /*donne couleur bleu et centre les h2*/
 h2
 {
 	align-self: center;
 	color: rgb(100, 150, 255);
+	text-decoration: underline;
+	padding: 5px;
+	border: 6px ridge rgba(100, 150, 250, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
 }
 
 
@@ -211,6 +262,11 @@ h2
 	font-size: 20px;
 	font-family: Verdana;
 	margin-bottom: 5px;
+	border: 6px ridge rgba(150, 100, 50, .6);
+	border-radius: 5px;
+	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.05turn, 0.001turn);
 }
 
 
@@ -222,6 +278,8 @@ h2
 	transition-property: width, height;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
+	-webkit-filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
 }
 
 
@@ -229,6 +287,7 @@ h2
 {
 	width: 120px;
 	height: auto;
+
 }
 
 
@@ -278,16 +337,17 @@ h2
 	padding: 10px;
 	height: 30px;
 	margin: 20px;
-	transition-property: width;
+	transition-property: width, background;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 .conteneur_bouton input:hover
 {
 	width: 25%;
+	cursor: pointer;
 }
-
 
 
 
@@ -301,7 +361,7 @@ h2
 */
 footer
 {
-	background-color: #57B0E3;
+	background: linear-gradient(#57B0E3,#57B0B3  );
 	display:flex;
 	justify-content: space-around;
 	align-content: center;
@@ -344,6 +404,8 @@ footer
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 	align-self: center;
+	-webkit-filter: drop-shadow(10px 8px 5px #222);
+	filter: drop-shadow(10px 8px 5px #222);
 }
 
 .logo_footer:hover
