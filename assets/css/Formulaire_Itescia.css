@@ -289,25 +289,14 @@ footer
 }
 
 
-.logo_footer
-{
-	width: 60px;
-	height: auto;
-}
-
-#logo_itescia
-{
-	background-color: white;
-	align-self: center;
-}
-
-
 
 #nav_footer
 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 
@@ -317,8 +306,8 @@ footer
 	justify-content: center;
 	align-content: center;
 	width: 60px;
-	margin-top:30px;
-	margin-bottom: 30px;
+	margin-right:10px;
+	margin-left:10px;
 }
 
 #nav_footer a figure
@@ -329,6 +318,25 @@ footer
 }
 
 
+.logo_footer
+{
+	width: 70px;
+	transition-property: width;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+	align-self: center;
+}
 
+.logo_footer:hover
+{
+	width: 60px;
+}
+
+
+#logo_itescia
+{
+	background-color: white;
+	align-self: center;
+}
 
 
