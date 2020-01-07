@@ -99,7 +99,7 @@ form
 #conteneur_avant_information
 {
 	padding: 20px;
-	margin: 40px;
+	margin: 25px;
 	background-color: rgb(220, 220, 235);
 	border-radius: 20px/20px;
 	transition-property: background-color;
@@ -109,11 +109,11 @@ form
 
 #conteneur_avant_information:hover
 {
-	padding: 20px;
-	margin: 40px;
-	background-color: rgb(200, 200, 215);
+	background-color: rgb(190, 190, 205);
 
 }
+
+
 
 
 /* 
@@ -139,6 +139,7 @@ form
 	background: rgb(220, 220, 235);
 	margin-left: 10px;
 }
+
 
 
 
@@ -178,6 +179,8 @@ form
 	justify-content: flex-start;
 }
 
+
+
 /*met de l'espace entre les label et les element adjacent horizontalement*/
 p label
 {
@@ -185,6 +188,11 @@ p label
 		padding-left: 10px;
 }
 
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select
+{
+	border-radius: 5px/5px;
+}
 
 /*donne couleur bleu et centre les h2*/
 h2
@@ -268,7 +276,16 @@ h2
 	padding: 10px;
 	height: 30px;
 	margin: 20px;
+	transition-property: width;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
 }
+
+.conteneur_bouton input:hover
+{
+	width: 25%;
+}
+
 
 
 
