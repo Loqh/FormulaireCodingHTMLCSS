@@ -293,7 +293,7 @@ footer a
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	width: 100px;
+	width: 60px;
 	margin-top:30px;
 	margin-bottom: 30px;
 }
@@ -314,7 +314,7 @@ footer p
 
 .logo_footer
 {
-	width: 100px;
+	width: 60px;
 	height: auto;
 }
 
@@ -329,6 +329,7 @@ footer p
 {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 
