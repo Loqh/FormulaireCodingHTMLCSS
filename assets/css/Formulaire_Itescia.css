@@ -12,6 +12,7 @@ body
    text-align: center;
 }
 
+
 p, em, strong
 {
 	color: black;
@@ -20,7 +21,7 @@ p, em, strong
 
 #logo
 {
-	width: 100px;
+	width: 100%;
 	background-color: white;
 	border-color: black;
 }
@@ -136,6 +137,7 @@ form
 p label
 {
 		padding-right: 10px;
+		padding-left: 10px;
 }
 
 

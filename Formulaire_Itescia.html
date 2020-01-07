@@ -6,14 +6,13 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="assets/css/Formulaire_Itescia.css" />
 		<title>Restons en contact!</title>
-		<script type="text/javascript" src="on_mouse_over.js"></script>
 	</head>
 
 
 
 	<body>
 		<header>
-			<p><img src="assets/images/itescia.png" alt="logo d'itescia"></p>
+			<p><img src="assets/images/itescia.png" alt="logo d'itescia" id="logo"></p>
 
 			<nav id="navi">
 				<a href="Formulaire_Itescia.html" title="acceder à l'accueil">Accueil</a>
@@ -39,7 +38,7 @@
 
 			<div class="conteneur_formulaire">
 				<section class="premiere_formation">
-					<h2 class="gestion">Votre 1er choix de formation à ITESCIA :</h2>
+					<h2>Votre 1er choix de formation à ITESCIA :</h2>
 
 				<!-- Gestion -->
 					<div id="gestion" class="conteneur_formation">
@@ -50,7 +49,7 @@
 								bac+2 :
 							</div>
 							<p>
-								<input type="checkbox" id="BTS_CG" name="BTS CG">
+								<input type="checkbox" id="BTS_CG" name="gestion" value="BTS CG">
 								<label for="BTS_CG"><strong>BTS CG</strong></label>
 							</p>
 						
@@ -60,9 +59,9 @@
 							</div>
 							<strong>DCG</strong>
 							<p>
-								<input type="checkbox" id="DCG_L1" name="DCG">
+								<input type="checkbox" id="DCG_L1" name="gestion" value="DCG L1">
 								<label for="DCG_L1">entrée en L1</label>
-								<input type="checkbox" id="DCG_L2" name="DCG">
+								<input type="checkbox" id="DCG_L2" name="gestion" value="DCG L2">
 								<label for="DCG_L2">entrée en L2</label>
 							</p>
 						
@@ -72,9 +71,9 @@
 							</div>
 							<strong>Contrôleur de Gestion:</strong>
 							<p>
-								<input type="checkbox" id="controleur_L3" name="controleur">
+								<input type="checkbox" id="controleur_L3" name="gestion" value="controleur L3">
 								<label for="controleur_L3">entrée en L3</label>
-								<input type="checkbox" id="controleur_M1" name="controleur">
+								<input type="checkbox" id="controleur_M1" name="gestion" value="controleur M1">
 								<label for="controleur_M1" >entrée en M1</label>
 							</p>
 
@@ -83,7 +82,7 @@
 								bac+5 :
 							</div>
 							<p>
-								<input type="checkbox" id="DSCG" name="DSCG">
+								<input type="checkbox" id="DSCG" name="gestion" value="DSCG">
 								<label for="DSCG" ><strong>DCSG</strong> (entrée en M1)</label>
 							</p>
 						</div>
@@ -102,10 +101,10 @@
 							</strong>	
 
 							<p>
-								<input type="checkbox" id="rsm_L3" name="rsm">
-								<label for="rsm_L3">entrée en L3</label>
-								<input type="checkbox" id="rsm_M1" name="rsm">
-								<label for="rsm_M1">entrée en M1</label>
+								<input type="checkbox" id="RSM_L3" name="gestion" value="RSM L3">
+								<label for="RSM_L3">entrée en L3</label>
+								<input type="checkbox" id="RSM_M1" name="gestion" value="RSM M1">
+								<label for="RSM_M1">entrée en M1</label>
 							</p>
 
 							<strong>
@@ -113,18 +112,18 @@
 							</strong>
 
 							<p>
-								<input type="checkbox" id="rrh_L3" name="rrh">
-								<label for="rrh_L3">entrée en L3</label>
-								<input type="checkbox" id="rrh_M1" name="rrh">
-								<label for="rrh_M1">entrée en M1</label>
+								<input type="checkbox" id="RRH_L3" name="gestion" value="RRH L3">
+								<label for="RRH_L3">entrée en L3</label>
+								<input type="checkbox" id="RRH_M1" name="gestion" value="RRH M1">
+								<label for="RRH_M1">entrée en M1</label>
 							</p>
 
 							<div class="bac">
 								bac+5 :
 							</div>
 							<p>
-								<input type="checkbox" id="mqpi" name="mqpi">
-								<label for="mqpi"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
+								<input type="checkbox" id="MQPI" name="gestion" value="MQPI">
+								<label for="MQPI"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
 							</p>
 						</div>
 					</div>
@@ -140,28 +139,28 @@
 								bac+2:
 							</div>
 							<p>
-								<input type="checkbox" id="bts_sio" name="bts_sio">
-								<label for="bts_sio"><strong>BTS SIO, option SISR ou SLAM</strong></label>
+								<input type="checkbox" id="BTS_SIO" name="informatique" value="BTS SIO">
+								<label for="BTS_SIO"><strong>BTS SIO, option SISR ou SLAM</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="codeur_informatique" name="codeur_informatique">
+								<input type="checkbox" id="codeur_informatique" name="informatique" value="codeur informatique">
 								<label for="codeur_informatique"><strong>Codeur informatique :</strong></label>
 							</p>
 
 							<strong>En 2 ans en alternance</strong>
 							<p>
-								<input type="radio" id="cergy_bac2_alt" name="bac2_info_alt">
+								<input type="radio" id="cergy_bac2_alt" name="informatique" value="codeur alternance cergy">
 								<label for="cergy_bac2_alt">à Cergy</label>
-								<input type="radio" id="paris_bac2_alt" name="bac2_info_alt">
+								<input type="radio" id="paris_bac2_alt" name="informatique" value="codeur alternance paris">
 								<label for="paris_bac2_alt">à Paris</label>
 							</p>
 							
 							<strong>En 1 an en temps plein</strong> (payant)
 							<p>
-								<input type="radio" id="cergy_bac2_tp" name="bac2_info_tp">
+								<input type="radio" id="cergy_bac2_tp" name="informatique" value="codeur temps plein cergy">
 								<label for="cergy_bac2_tp">à Cergy</label>
-								<input type="radio" id="paris_bac2_tp" name="bac2_info_tp">
+								<input type="radio" id="paris_bac2_tp" name="informatique" value="codeur alternance temps plein">
 								<label for="paris_bac2_tp">à Paris</label>
 							</p>
 
@@ -170,24 +169,24 @@
 								bac+3 (en 1 an) :
 							</div>
 							<p>
-								<input type="checkbox" id="lig" name="lig">
-								<label for="lig"><strong>Licence d'Informatique générale</strong></label>
+								<input type="checkbox" id="LIG" name="informatique" value="LIG">
+								<label for="LIG"><strong>Licence d'Informatique générale</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="cdsmc" name="cdsmc">
-								<label for="cdsmc"><strong>Concepteur développeur de solution mobiles et connectées</strong></label>
+								<input type="checkbox" id="CDSMC" name="informatique" value="CDSMC">
+								<label for="CDSMC"><strong>Concepteur développeur de solution mobiles et connectées</strong></label>
 							</p>
 
 							<strong>En alternance</strong>
 							<p>
-								<input type="checkbox" id="cergy_bac3_alt" name="cergy">
+								<input type="checkbox" id="cergy_bac3_alt" name="informatique" value="CDSMC alternance cergy">
 								<label for="cergy_bac3_alt">à Cergy</label>
 							</p>
 
 							<strong>En temps plein</strong> (payant)
 							<p>
-								<input type="checkbox" id="paris_bac3_tp" name="paris">
+								<input type="checkbox" id="paris_bac3_tp" name="informatique" value="CDSMC temps plein">
 								<label for="paris_bac3_tp">à Paris</label>
 							</p>
 						
@@ -199,62 +198,64 @@
 							<strong>Manager en Ingénierie Informatique</strong>
 
 							<p>
-								<input type="checkbox" id="l3" name="mii">
-								<label for="l3">entrée en L3</label>
+								<input type="checkbox" id="MII_l3" name="informatique" value="MII L3">
+								<label for="MII_l3">entrée en L3</label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="m1" name="mii">
-								<label for="m1">entrée en M1, spécialisation</label>
+								<input type="checkbox" id="MII_M1" name="informatique" value="MII M1">
+								<label for="MII_M1">entrée en M1, spécialisation</label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_c" name="mii">
-								<label for="msc_c"><strong>MSc Cybersécurité</strong></label>
+								<input type="checkbox" id="M1_MSC_C" name="informatique" value="M1 cybersecurite">
+								<label for="M1_MSC_C"><strong>MSc Cybersécurité</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_rs" name="mii">
-								<label for="msc_rs"><strong>MSc Réseaux & Systèmes</strong></label>
+								<input type="checkbox" id="M1_MSC_RS" name="informatique" value="M1 reseau & systeme">
+								<label for="M1_MSC_RS"><strong>MSc Réseaux & Systèmes</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_bc" name="mii">
-								<label for="msc_bc"><strong>MSc Big data & cloud</strong></label>
+								<input type="checkbox" id="M1_MSC_BDC" name="informatique" value="M1 big data & cloud">
+								<label for="M1_MSC_BDC"><strong>MSc Big data & cloud</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_gs" name="mii">
+								<input type="checkbox" id="M1_MSC_GST" name="informatique" value="M1 gaming & smart tech">
 								<label for="msc_gs"><strong>MSc Gaming & Smart Tech</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_md" name="mii">
-								<label for="msc_md"><strong>MSc Management des SI & Digitalisation</strong></label>
+								<input type="checkbox" id="M1_MSC_MD" name="informatique" value="M1 MSC management des SI & digitalisation">
+								<label for="M1_MSC_MD"><strong>MSc Management des SI & Digitalisation</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="i_ls" name="mii">
-								<label for="i_ls"><strong>Ingénierie Logiciels et Systèmes</strong></label>
+								<input type="checkbox" id="M1_ILS" name="informatique" value="M1 ingenierie logiciels et systemes">
+								<label for="M1_ILS"><strong>Ingénierie Logiciels et Systèmes</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="i_aa" name="mii">
-								<label for="i_aa"><strong>Intelligence Artificielle et Applications</strong></label>
+								<input type="checkbox" id="M1_IAA" name="informatique" value="M1 ingenierie artificielle et applications">
+								<label for="M1_IAA"><strong>Intelligence Artificielle et Applications</strong></label>
+							</p>
+
+
+
+							<p>
+								<input type="checkbox" id="M2" name="informatique" value="M2">
+								<label for="M2">entrée en M2, spécialisation :</label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="m2" name="mii">
-								<label for="m2">entrée en M2, spécialisation :</label>
+								<input type="checkbox" id="M2_MSC_EI" name="informatique" value="M2 entrepreneuriat & IT">
+								<label for="M2_MSC_EI"><strong>MSc Entrepreneuriat & IT</strong></label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_ei" name="mii">
-								<label for="msc_ei"><strong>MSc Entrepreneuriat & IT</strong></label>
-							</p>
-
-							<p>
-								<input type="checkbox" id="msc_ibi" name="mii">
+								<input type="checkbox" id="msc_ibi" name="informatique" value="M2 international business for IT">
 								<label for="msc_ibi"><strong>MSc International Business for IT</strong></label>
 							</p>
 
@@ -263,12 +264,12 @@
 							<strong>Business Analyste (M1 + M2)</strong>
 
 							<p>
-								<input type="checkbox" id="msc_psi" name="mii">
+								<input type="checkbox" id="msc_psi" name="informatique" value="M2 performance et systeme d'information">
 								<label for="msc_psi">Performance et systèmes d'information</label>
 							</p>
 
 							<p>
-								<input type="checkbox" id="msc_drh" name="mii">
+								<input type="checkbox" id="msc_drh" name="informatique" value="M2 digitalisation">
 								<label for="msc_drh">Digitalisation RH</label>
 							</p>
 						</div>
