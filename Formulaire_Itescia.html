@@ -25,7 +25,7 @@
 
 
 
-		<form method="post">
+		<form method="post" action="">
 			<h1>
 				Formulaire de contact
 			</h1>
@@ -60,9 +60,9 @@
 							</div>
 							<strong>DCG</strong>
 							<p>
-								<input type="checkbox" id="DCG_L1" name="DCG_L1">
+								<input type="checkbox" id="DCG_L1" name="DCG">
 								<label for="DCG_L1">entrée en L1</label>
-								<input type="checkbox" id="DCG_L2" name="DCG_L2">
+								<input type="checkbox" id="DCG_L2" name="DCG">
 								<label for="DCG_L2">entrée en L2</label>
 							</p>
 						
@@ -72,9 +72,9 @@
 							</div>
 							<strong>Contrôleur de Gestion:</strong>
 							<p>
-								<input type="checkbox" id="controleur_L3" name="controleur_L3">
+								<input type="checkbox" id="controleur_L3" name="controleur">
 								<label for="controleur_L3">entrée en L3</label>
-								<input type="checkbox" id="controleur_M1" name="controleur_M1">
+								<input type="checkbox" id="controleur_M1" name="controleur">
 								<label for="controleur_M1" >entrée en M1</label>
 							</p>
 
@@ -102,9 +102,9 @@
 							</strong>	
 
 							<p>
-								<input type="checkbox" id="rsm_L3" name="rsm_L3">
+								<input type="checkbox" id="rsm_L3" name="rsm">
 								<label for="rsm_L3">entrée en L3</label>
-								<input type="checkbox" id="rsm_M1" name="rsm_M1">
+								<input type="checkbox" id="rsm_M1" name="rsm">
 								<label for="rsm_M1">entrée en M1</label>
 							</p>
 
@@ -113,9 +113,9 @@
 							</strong>
 
 							<p>
-								<input type="checkbox" id="rrh_L3" name="rrh_L3">
+								<input type="checkbox" id="rrh_L3" name="rrh">
 								<label for="rrh_L3">entrée en L3</label>
-								<input type="checkbox" id="rrh_M1" name="rrh_M1">
+								<input type="checkbox" id="rrh_M1" name="rrh">
 								<label for="rrh_M1">entrée en M1</label>
 							</p>
 
@@ -201,6 +201,9 @@
 							<p>
 								<input type="checkbox" id="l3" name="mii">
 								<label for="l3">entrée en L3</label>
+							</p>
+
+							<p>
 								<input type="checkbox" id="m1" name="mii">
 								<label for="m1">entrée en M1, spécialisation</label>
 							</p>
@@ -282,8 +285,8 @@
 						<p>
 							<label for="sexe">sexe :</label>
 							<select name="sexe" id="sexe" >
-								<option value="1">Homme</option>
-								<option value="2">Femme</option>
+								<option value="homme">Homme</option>
+								<option value="femme">Femme</option>
 							</select>
 						</p>
 
@@ -335,9 +338,9 @@
 						<p>
 							<label for="coordonnees_nationalite">Nationalité :</label>
 							<select name="coordonnees_nationalité" id="coordonnees_nationalite">
-								<option value="1">Française</option>
-								<option value="2">UE</option>
-								<option value="2">Hors UE</option>
+								<option value="francaise">Française</option>
+								<option value="UE">UE</option>
+								<option value="hors UE">Hors UE</option>
 							</select>
 						</p>
 
@@ -373,22 +376,22 @@
 						<p>
 							<label for="souhait_2">N°2 :</label>
 							<select name="souhait_2" id="souhait_2">
-								<option value="1">L1</option>
-								<option value="2">L2</option>
-								<option value="2">L3</option>
-								<option value="2">M1</option>
-								<option value="2">M2</option>
+								<option value="L1">L1</option>
+								<option value="L2">L2</option>
+								<option value="L3">L3</option>
+								<option value="M1">M1</option>
+								<option value="M2">M2</option>
 							</select>
 						</p>
 
 						<p>
 							<label for="souhait_3">N°3 :</label>
 							<select name="souhait_3" id="souhait_3">
-								<option value="1">L1</option>
-								<option value="2">L2</option>
-								<option value="2">L3</option>
-								<option value="2">M1</option>
-								<option value="2">M2</option>
+								<option value="L1">L1</option>
+								<option value="L2">L2</option>
+								<option value="L3">L3</option>
+								<option value="M1">M1</option>
+								<option value="M2">M2</option>
 							</select>
 						</p>
 					</section>

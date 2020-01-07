@@ -184,9 +184,23 @@ h2
 
 .conteneur_formation
 {
-	background-color: grey;
+	background-color: lightgrey;
 }
 
+/*
+.conteneur_formation div
+{
+	background-color: blue;
+}*/
+.conteneur_formation div
+{
+	width: 80%;
+}
+
+.conteneur_formation div .bac
+{
+	align-self: center;
+}
 
 .conteneur_bouton
 {
