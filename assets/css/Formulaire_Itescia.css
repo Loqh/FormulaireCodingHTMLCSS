@@ -225,7 +225,7 @@ form
 ######### colonne  (permiere formation; ou coordonnées, scolarité, parrain...) #######
 ######################################################################################
 */
-.autres_info_conteneur, .premiere_formation_text, .premiere_formation
+.autres_info_conteneur, .premiere_formation_text, .premiere_formation, .autres_informations
 {
 	display: flex;
 	flex-direction: column;
@@ -340,7 +340,7 @@ h2
 	width: 100%;
 	max-width: 70px;
 	height: auto;
-	transition-property: width, height, filter, max-width;
+	transition-property: filter;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
 	-webkit-filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
@@ -350,11 +350,7 @@ h2
 
 .premiere_formation img:hover
 {
-	width: 100%;
-	max-width: 120px;
-	height: auto;
-	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.1));
-
+	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.3));
 }
 
 
@@ -367,6 +363,14 @@ h2
 	flex-direction: row;
 	align-content: center;
 	padding: 20px;
+}
+
+.conteneur_formation, .autres_info_conteneur
+{
+	background: linear-gradient(rgba(255, 44, 44, 0.4), rgba(255, 44, 44, 0.7));
+	margin-top: 20px;
+	border: black groove 4px;
+	border-radius: 10px;
 }
 
 
