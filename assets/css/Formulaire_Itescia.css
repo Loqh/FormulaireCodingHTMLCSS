@@ -39,16 +39,15 @@ header img
 #nav_header
 {
 	height: 50px;
-	background: linear-gradient(#57B0E3,#57B0B3);
+	/*background: linear-gradient(#57B0E3,#57B0B3);*/
+	background: linear-gradient(rgb(231, 76, 60),rgb(211, 56, 40));
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	padding: 20px;
 	box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.15);
 }
-
 
 
 
@@ -56,37 +55,35 @@ header img
 	width: 10%;
 	line-height: 50px;
 	word-spacing: 5em;
-	border: groove;
-	border-color: black;
-	border-radius: 5px;
 	color: black;
+	font-size: 20px;
 
-	margin-right: 20px;
-	margin-left: 20px;
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: rgb(250, 250, 250);
-	
-	transition-property: background-color, border-radius, width, color;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-out;
+	/*background-color: rgb(250, 250, 250);*/
+	background: none;
 	
 	position: relative;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transition-property: background;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
 
 }
 
 
 #nav_header a:hover
 {
-	background-color: rgb(220, 220, 235);
-	border-radius: 80px /20px;
-	width: 20%;
+	background: white;
+	color: black;
 }
 
 #nav_header a:visited
 {
-	color: red;
+	color: white;
+}
+#nav_header a:visited:hover
+{
+	color: black;
 }
 
 #nav_header a:active
@@ -426,9 +423,19 @@ h2
 ################################## partie footer #####################################
 ######################################################################################
 */
+
 footer
 {
-	background: linear-gradient(#57B0E3,#57B0B3  );
+	background: linear-gradient(rgb(86, 101, 115),rgb(66, 81, 95)  );
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+}
+
+
+.footer_1
+{
 	display:flex;
 	justify-content: space-around;
 	align-content: center;
@@ -436,7 +443,7 @@ footer
 
 
 
-#nav_footer
+#nav_footer_reseau_sociaux, #partenaire_itescia
 {
 	display: flex;
 	flex-direction: row;
@@ -445,8 +452,21 @@ footer
 	margin-bottom: 30px;
 }
 
+#partenaire_itescia
+{
+	background: white;
+	justify-content: space-around;
+}
 
-#nav_footer a
+#partenaire_itescia a
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#nav_footer_reseau_sociaux a
 {
 	display: flex;
 	justify-content: center;
@@ -456,7 +476,7 @@ footer
 	margin-left:10px;
 }
 
-#nav_footer a figure
+#nav_footer_reseau_sociaux a figure, #partenaire_itescia a figure
 {
 	display: flex;
 	justify-content: center;
@@ -464,9 +484,11 @@ footer
 }
 
 
+
+
 .logo_footer
 {
-	width: 70px;
+	width: 35px;
 	transition-property: width;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
@@ -477,7 +499,7 @@ footer
 
 .logo_footer:hover
 {
-	width: 60px;
+	width: 30px;
 }
 
 
@@ -488,6 +510,22 @@ footer
 }
 
 
+#nav_mentions
+{
+	display: flex;
+	justify-content: space-around;
+}
+#nav_mentions a
+{
+	color: white;
+	font-size: 14px;
+}
+
+.copyright
+{
+	padding: 10px;
+	color: white;
+}
 
 
 
