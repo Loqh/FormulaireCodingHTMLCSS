@@ -7,12 +7,23 @@
 		<link rel="stylesheet" href="assets/css/Formulaire_Itescia.css" />
 		<title>Restons en contact!</title>
 
+
+
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$( function() {
+			$( "#datepicker" ).datepicker();
+			} );
+		</script>
+		
 	</head>
 
 
 
 	<body>
-		<header role="banner">
+		<header>
 			<figure><img src="assets/images/itescia_grand.png" alt="logo d'itescia" id="logo_header"></figure>
 
 			<nav id="nav_header">
@@ -23,7 +34,7 @@
 			<!--
 			<figure><img src="assets/images/itescia_grand.png" alt="logo d'itescia" id="logo_moving" style="width: 30px; height: auto; position: fixed; left: 40px; top: 40px; background: white; 	box-shadow: 20px 16px 10px rgba(0, 0, 0, 0.15);
 "></figure> -->
-
+	
 
 		</header>
 
@@ -34,28 +45,30 @@
 		<form method="post" action="Formulaire_Itescia.html">
 			<div id="conteneur_avant_information">
 				<h1>
-					Formulaire de contact
+					Formulaire de contact ITESCIA
 				</h1>
 
 				<p>
-					<label for="date_de_saisie">Date :</label>
+					<label id='label_date_saisie' for="date_de_saisie">Date :</label>
 					<input type="date" id="date_de_saisie" name="date_de_saisie">
+
 					<label for="evenement">Evénement :</label>
 					<input type="text" id="evenement" name="evenement">
 				</p>
 			</div>
 
+
 			<div id="conteneur_formulaire" class="conteneur_formulaire">
-				<section class="premiere_formation">
+				<section id='premiere_formation' class="premiere_formation">
 					<h2>Votre 1er choix de formation à ITESCIA :</h2>
 
 				<!-- Gestion -->
 					<div id="gestion" class="conteneur_formation">
-						<p>	<a href="https://www.itescia.fr/formation-initiale/gestion"><img src="assets/images/image_gestion_transparent.png" alt="" id="img_gestion"> </a></p>
+						<p>	<a href="https://www.itescia.fr/formation-initiale/gestion" title="plus d'information sur le pole gestion sur itescia.fr"><img src="assets/images/image_gestion_transparent.png" alt="" id="img_gestion"> </a></p>
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac+2 :
+								bac + 2:
 							</div>
 							<p>
 								<input type="radio" id="BTS_CG" name="premiere_formation" value="BTS CG">
@@ -64,7 +77,7 @@
 						
 
 							<div class="bac">
-								bac+3 :
+								bac + 3:
 							</div>
 							<p>
 								<strong>DCG</strong>
@@ -79,7 +92,7 @@
 						
 
 							<div class="bac">
-								bac+4 :
+								bac + 4:
 							</div>
 							<p>
 								<strong>Contrôleur de Gestion:</strong>
@@ -94,7 +107,7 @@
 
 
 							<div class="bac">
-								bac+5 :
+								bac + 5 :
 							</div>
 							<p>
 								<input type="radio" id="DSCG" name="premiere_formation" value="DSCG">
@@ -105,11 +118,11 @@
 
 				<!-- Management -->
 					<div id="management" class="conteneur_formation">
-						<p>	<a href="https://www.itescia.fr/formation-initiale/management"><img src="assets/images/image_management_transparent.png" alt="" id="img_management"></a> </p>
+						<p>	<a href="https://www.itescia.fr/formation-initiale/management" title="plus d'information sur le pole management sur itescia.fr"><img src="assets/images/image_management_transparent.png" alt="" id="img_management"></a> </p>
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac+4 :
+								bac + 4 :
 							</div>
 							<p>
 								<strong>Responsable de systèmes de management QHSE</strong>	
@@ -122,7 +135,7 @@
 								<label for="RSM_M1">entrée en M1</label>
 							</p>
 
-							<p>
+							<p class="separateur">
 								<strong>Responsable Ressources Humaines</strong>
 							</p>
 
@@ -134,7 +147,7 @@
 							</p>
 
 							<div class="bac">
-								bac+5 :
+								bac + 5 :
 							</div>
 							<p>
 								<input type="radio" id="MQPI" name="premiere_formation" value="MQPI">
@@ -147,77 +160,79 @@
 
 				<!-- Informatique -->
 					<div id="informatique" class="conteneur_formation">
-						<p>	<a href="https://www.itescia.fr/formation-initiale/informatique-0"><img src="assets/images/image_informatique_transparent.png" alt="" id="img_informatique"> </a></p>
+						<p>	<a href="https://www.itescia.fr/formation-initiale/informatique-0" title="plus d'information sur le pole informatique sur itescia.fr"><img src="assets/images/image_informatique_transparent.png" alt="" id="img_informatique"> </a></p>
 						
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac+2:
+								bac + 2:
 							</div>
 							<p>
 								<input type="radio" id="BTS_SIO" name="premiere_formation" value="BTS SIO">
 								<label for="BTS_SIO"><strong>BTS SIO, option SISR ou SLAM</strong></label>
 							</p>
 
-							<p>
-								<input type="radio" id="codeur_informatique" name="premiere_formation" value="codeur informatique">
-								<label for="codeur_informatique"><strong>Codeur informatique :</strong></label>
+							<p class="separateur">
+								<strong>Codeur informatique :</strong>
 							</p>
 
-
-							<p>
-								<strong>En 2 ans en alternance</strong>
-							</p>
-							<p>
-								<input type="radio" id="cergy_bac2_alt" name="premiere_formation" value="codeur alternance cergy">
-								<label for="cergy_bac2_alt">à Cergy</label>
-								<input type="radio" id="paris_bac2_alt" name="premiere_formation" value="codeur alternance paris">
-								<label for="paris_bac2_alt">à Paris</label>
-							</p>
-							
-							<p>
-								<strong>En 1 an en temps plein</strong> (payant)
-							</p>
-							<p>
-								<input type="radio" id="cergy_bac2_tp" name="premiere_formation" value="codeur temps plein cergy">
-								<label for="cergy_bac2_tp">à Cergy</label>
-								<input type="radio" id="paris_bac2_tp" name="premiere_formation" value="codeur alternance temps plein">
-								<label for="paris_bac2_tp">à Paris</label>
-							</p>
+							<div class="specialisation">
+								<p>
+									<strong>En 2 ans en alternance</strong>
+								</p>
+								<p>
+									<input type="radio" id="cergy_bac2_alt" name="premiere_formation" value="codeur alternance cergy">
+									<label for="cergy_bac2_alt">à Cergy</label>
+									<input type="radio" id="paris_bac2_alt" name="premiere_formation" value="codeur alternance paris">
+									<label for="paris_bac2_alt">à Paris</label>
+								</p>
+								
+								<p>
+									<strong>En 1 an en temps plein</strong> (payant)
+								</p>
+								<p>
+									<input type="radio" id="cergy_bac2_tp" name="premiere_formation" value="codeur temps plein cergy">
+									<label for="cergy_bac2_tp">à Cergy</label>
+									<input type="radio" id="paris_bac2_tp" name="premiere_formation" value="codeur alternance temps plein">
+									<label for="paris_bac2_tp">à Paris</label>
+								</p>
+							</div>
 
 
 							<div class="bac">
-								bac+3 (en 1 an) :
+								bac + 3 (en 1 an) :
 							</div>
 							<p>
 								<input type="radio" id="LIG" name="premiere_formation" value="LIG">
 								<label for="LIG"><strong>Licence d'Informatique générale</strong></label>
 							</p>
 
-							<p>
-								<input type="radio" id="CDSMC" name="premiere_formation" value="CDSMC">
-								<label for="CDSMC"><strong>Concepteur développeur de solution mobiles et connectées</strong></label>
+							<p class="separateur">
+								<strong>Concepteur développeur de solution mobiles et connectées</strong>
 							</p>
 
-							<p>
-								<strong>En alternance</strong>
-							</p>
-							<p>
-								<input type="radio" id="cergy_bac3_alt" name="premiere_formation" value="CDSMC alternance cergy">
-								<label for="cergy_bac3_alt">à Cergy</label>
-							</p>
+							<div class="specialisation">
 
-							<p>
-								<strong>En temps plein</strong> (payant)
-							</p>
-							<p>
-								<input type="radio" id="paris_bac3_tp" name="premiere_formation" value="CDSMC temps plein">
-								<label for="paris_bac3_tp">à Paris</label>
-							</p>
+								<p>
+									<strong>En alternance</strong>
+								</p>
+								<p>
+									<input type="radio" id="cergy_bac3_alt" name="premiere_formation" value="CDSMC alternance cergy">
+									<label for="cergy_bac3_alt">à Cergy</label>
+								</p>
+
+								<p>
+									<strong>En temps plein</strong> (payant)
+								</p>
+								<p>
+									<input type="radio" id="paris_bac3_tp" name="premiere_formation" value="CDSMC temps plein">
+									<label for="paris_bac3_tp">à Paris</label>
+								</p>
+							</div>
 						
 
 
 							<div class="bac">
-								bac+5 :
+								bac + 5 :
 							</div>
 							<p>
 								<strong>Manager en Ingénierie Informatique</strong>
@@ -229,65 +244,65 @@
 							</p>
 
 							<p>
-								<input type="radio" id="MII_M1" name="premiere_formation" value="MII M1">
-								<label for="MII_M1">entrée en M1, spécialisation</label>
+								entrée en M1, spécialisation :
 							</p>
 
-							<p>
-								<input type="radio" id="M1_MSC_C" name="premiere_formation" value="M1 cybersecurite">
-								<label for="M1_MSC_C"><strong>MSc Cybersécurité</strong></label>
-							</p>
+							<div class="specialisation">
+								<p>
+									<input type="radio" id="M1_MSC_C" name="premiere_formation" value="M1 cybersecurite">
+									<label for="M1_MSC_C"><strong>MSc Cybersécurité</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_MSC_RS" name="premiere_formation" value="M1 reseau & systeme">
-								<label for="M1_MSC_RS"><strong>MSc Réseaux & Systèmes</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_MSC_RS" name="premiere_formation" value="M1 reseau & systeme">
+									<label for="M1_MSC_RS"><strong>MSc Réseaux & Systèmes</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_MSC_BDC" name="premiere_formation" value="M1 big data & cloud">
-								<label for="M1_MSC_BDC"><strong>MSc Big data & cloud</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_MSC_BDC" name="premiere_formation" value="M1 big data & cloud">
+									<label for="M1_MSC_BDC"><strong>MSc Big data & cloud</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_MSC_GST" name="premiere_formation" value="M1 gaming & smart tech">
-								<label for="M1_MSC_GST"><strong>MSc Gaming & Smart Tech</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_MSC_GST" name="premiere_formation" value="M1 gaming & smart tech">
+									<label for="M1_MSC_GST"><strong>MSc Gaming & Smart Tech</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_MSC_MD" name="premiere_formation" value="M1 MSC management des SI & digitalisation">
-								<label for="M1_MSC_MD"><strong>MSc Management des SI & Digitalisation</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_MSC_MD" name="premiere_formation" value="M1 MSC management des SI & digitalisation">
+									<label for="M1_MSC_MD"><strong>MSc Management des SI & Digitalisation</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_ILS" name="premiere_formation" value="M1 ingenierie logiciels et systemes">
-								<label for="M1_ILS"><strong>Ingénierie Logiciels et Systèmes</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_ILS" name="premiere_formation" value="M1 ingenierie logiciels et systemes">
+									<label for="M1_ILS"><strong>Ingénierie Logiciels et Systèmes</strong></label>
+								</p>
 
-							<p>
-								<input type="radio" id="M1_IAA" name="premiere_formation" value="M1 ingenierie artificielle et applications">
-								<label for="M1_IAA"><strong>Intelligence Artificielle et Applications</strong></label>
-							</p>
-
-
-
-							<p>
-								<input type="radio" id="M2" name="premiere_formation" value="M2">
-								<label for="M2">entrée en M2, spécialisation :</label>
-							</p>
-
-							<p>
-								<input type="radio" id="M2_MSC_EI" name="premiere_formation" value="M2 entrepreneuriat & IT">
-								<label for="M2_MSC_EI"><strong>MSc Entrepreneuriat & IT</strong></label>
-							</p>
-
-							<p>
-								<input type="radio" id="msc_ibi" name="premiere_formation" value="M2 international business for IT">
-								<label for="msc_ibi"><strong>MSc International Business for IT</strong></label>
-							</p>
+								<p>
+									<input type="radio" id="M1_IAA" name="premiere_formation" value="M1 ingenierie artificielle et applications">
+									<label for="M1_IAA"><strong>Intelligence Artificielle et Applications</strong></label>
+								</p>
+							</div>
 
 
+								<p>
+									entrée en M2, spécialisation :
+								</p>
 
-							<p>
+							<div class="specialisation">
+								<p>
+									<input type="radio" id="M2_MSC_EI" name="premiere_formation" value="M2 entrepreneuriat & IT">
+									<label for="M2_MSC_EI"><strong>MSc Entrepreneuriat & IT</strong></label>
+								</p>
+
+								<p>
+									<input type="radio" id="msc_ibi" name="premiere_formation" value="M2 international business for IT">
+									<label for="msc_ibi"><strong>MSc International Business for IT</strong></label>
+								</p>
+
+							</div>
+
+							<p class="separateur">
 								<strong>Business Analyste (M1 + M2)</strong>
 							</p>
 
@@ -307,7 +322,7 @@
 
 
 
-				<div class="autres_informations"> 
+				<div id='autres_informations' class="autres_informations"> 
 					<section id="coordonnees" class="autres_info_conteneur">
 
 						<h2 class="coordonnees">Vos coordonnées :</h2>
@@ -535,21 +550,26 @@
 
 		<footer>
 			<nav id="nav_footer">
-				<a href="https://www.itescia.fr/"><figure><img src="assets/images/itescia.png" alt="logo d'itescia" id="logo_itescia" class="logo_footer"></figure></a>
+				<a href="https://www.itescia.fr/" title="acceder à itescia.fr"><figure><img src="assets/images/itescia.png" alt="logo d'itescia" id="logo_itescia" class="logo_footer"></figure></a>
 
-				<a href="https://www.facebook.com/itescia/"><figure><img src="assets/images/fb_logo.png" alt="logo facebook"  id="logo_fb" class="logo_footer"></figure></a>
+				<a href="https://www.facebook.com/itescia/" title="acceder à la page facebook d'itescia"><figure><img src="assets/images/fb_logo.png" alt="logo facebook"  id="logo_fb" class="logo_footer"></figure></a>
 
-				<a href="https://twitter.com/ITESCIA"><figure><img src="assets/images/twitter_logo.png" alt="logo twitter"  id="logo_twitter" class="logo_footer"></figure></a>
+				<a href="https://twitter.com/ITESCIA" title="acceder au compte twitter d'itescia"><figure><img src="assets/images/twitter_logo.png" alt="logo twitter"  id="logo_twitter" class="logo_footer"></figure></a>
 				
-				<a href="https://www.linkedin.com/school/itescia/"><figure><img src="assets/images/linkedin_logo.png" alt="logo linkedin"  id="logo_linkedin" class="logo_footer"></figure></a>
+				<a href="https://www.linkedin.com/school/itescia/" title="acceder au linkedin d'itescia"><figure><img src="assets/images/linkedin_logo.png" alt="logo linkedin"  id="logo_linkedin" class="logo_footer"></figure></a>
 				
-				<a href="https://www.youtube.com/channel/UCAhB6gZz4lFwtbXqhzkyVDg"><figure><img src="assets/images/youtube_logo.png" alt="logo youtube"  id="logo_youtube" class="logo_footer"></figure></a>
+				<a href="https://www.youtube.com/channel/UCAhB6gZz4lFwtbXqhzkyVDg" title="acceder au compte youtube d'itescia"><figure><img src="assets/images/youtube_logo.png" alt="logo youtube"  id="logo_youtube" class="logo_footer"></figure></a>
 				
-				<a href="https://www.instagram.com/itescia_officiel/"><figure><img src="assets/images/instagram_logo.png" alt="logo instagram"  id="logo_instagram" class="logo_footer"></figure></a>
+				<a href="https://www.instagram.com/itescia_officiel/" title="acceder au compte instagram d'itescia"><figure><img src="assets/images/instagram_logo.png" alt="logo instagram"  id="logo_instagram" class="logo_footer"></figure></a>
 
 			</nav>
 
 		</footer>
+
+		
+		<script src="assets/js/manageDate.js"></script>
+		<script src="assets/js/resizeColonne2.js"></script>
+
 
 
 	</body>

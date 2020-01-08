@@ -11,6 +11,7 @@ p, em, strong
 {
 	color: black;
 	word-wrap: break-word;
+	text-align: left;
 }
 
 
@@ -22,6 +23,14 @@ p, em, strong
 }
 
 
+header img
+{
+	text-align: center;
+	max-width: 600px;
+}
+
+
+
 /* 
 ######################################################################################
 ################################## partie nav  #######################################
@@ -30,7 +39,7 @@ p, em, strong
 #nav_header
 {
 	height: 50px;
-	background: linear-gradient(#57B0E3,#57B0B3  );
+	background: linear-gradient(#57B0E3,#57B0B3);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -49,6 +58,7 @@ p, em, strong
 	word-spacing: 5em;
 	border: groove;
 	border-color: black;
+	border-radius: 5px;
 	color: black;
 
 	margin-right: 20px;
@@ -86,6 +96,7 @@ p, em, strong
 }
 
 
+/*ajoute une barre apparaissant sous le texte*/
 #nav_header a:after
 {
 	content: "";
@@ -130,7 +141,6 @@ form
 {
 	padding: 20px;
 	margin: 25px;
-	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 205));
 	border-radius: 20px/20px;
 	transition-property: background;
 	transition-duration: 1s;
@@ -138,7 +148,10 @@ form
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-
+#conteneur_avant_information p 
+{
+	text-align: center;
+}
 
 
 
@@ -154,23 +167,40 @@ form
 	justify-content: space-between;
 	align-content: center;
 	padding-bottom: 20px;
+	flex-wrap: wrap;
 }
+
 
 /*marge entre les deux colonne*/
 .premiere_formation
 {
-	margin-right: 10px;
 	margin-left: 25px;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-}
-
-.autres_informations
-{
-	background: rgb(220, 220, 235);
-	margin-left: 10px;
 	margin-right: 25px;
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
+
+
+.autres_informations
+{
+	margin-left: 25px;
+	margin-right: 25px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* 
+######################################################################################
+################################ couleur des colonnes  ###############################
+######################################################################################
+*/
+#conteneur_avant_information, .premiere_formation, .autres_informations
+{
+	background: linear-gradient(0.47turn, rgb(220, 220, 235), rgb(180, 180, 180));
+}
+
+
 
 
 
@@ -197,10 +227,15 @@ form
 */
 .autres_info_conteneur, .premiere_formation_text, .premiere_formation
 {
-	background-color: rgb(220, 220, 235);
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+}
+
+
+.autres_info_conteneur, .premiere_formation_text
+{
+	background: rgba(220,220,220,0);
 }
 
 /*aligne les paragraphes sur le bord gauche*/
@@ -240,7 +275,20 @@ label
 
 
 
-/*donne couleur bleu et centre les h2*/
+
+h1
+{
+	align-self: center;
+	color: rgba(0, 0, 0, .8);
+	padding: 5px;
+	border: 6px ridge rgba(10, 10, 10, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn ,rgba(250, 10, 10, .4) , rgba(250, 10, 10, .8));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
+}
+
+/*donne mise en forme et centre les h2*/
 h2
 {
 	align-self: center;
@@ -258,24 +306,41 @@ h2
 /*pour les element de classe bac (dans la colonne 1 : premiere formation)*/
 .bac
 {
-	color: red;
+	color: black;
 	font-size: 20px;
 	font-family: Verdana;
+	font-weight: 600;
 	margin-bottom: 5px;
+	margin-top: 15px;
 	border: 6px ridge rgba(150, 100, 50, .6);
 	border-radius: 5px;
-	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
+	background: linear-gradient(0.47turn, rgba(250, 10, 10, .4) ,rgba(250, 10, 10, .9));
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 	transform: skew(-0.05turn, 0.001turn);
+}
+
+
+.specialisation
+{
+	padding-left: 20px;
+}
+
+.separateur
+{
+	border-top: 2px ridge rgba(100, 100, 100, .8);
+	padding-top: 15px;
+	text-align: left;
+	word-wrap: break-word;
 }
 
 
 /*pour les images gestion, management et informatique (dans la colonne 1 : premiere formation)*/
 .premiere_formation img
 {
-	width: 80px;
+	width: 100%;
+	max-width: 70px;
 	height: auto;
-	transition-property: width, height;
+	transition-property: width, height, filter, max-width;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
 	-webkit-filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
@@ -285,8 +350,10 @@ h2
 
 .premiere_formation img:hover
 {
-	width: 120px;
+	width: 100%;
+	max-width: 120px;
 	height: auto;
+	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.1));
 
 }
 
@@ -302,10 +369,6 @@ h2
 	padding: 20px;
 }
 
-.conteneur_formation
-{
-	background-color: rgb(220, 220, 235);
-}
 
 
 .conteneur_formation div
@@ -419,5 +482,11 @@ footer
 	background-color: white;
 	align-self: center;
 }
+
+
+
+
+
+
 
 
