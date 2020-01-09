@@ -94,7 +94,7 @@ header img
 
 
 #nav_header a {
-	width: 10%;
+
 	line-height: 50px;
 	word-spacing: 5em;
 	color: black;
@@ -190,7 +190,10 @@ form
 	flex-wrap: wrap;
 	justify-content: flex-start;	
 }
-
+#block_avant_information
+{
+	justify-content: center;
+}
 
 
 /* 
