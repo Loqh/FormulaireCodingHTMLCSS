@@ -1,4 +1,7 @@
-
+html
+{
+	min-width: 300px;
+}
 
 body
 {
@@ -106,7 +109,7 @@ header img
 #nav_header a {
 
 	line-height: 50px;
-	color: black;
+	color: white;
 	font-size: 20px;
 
 	padding-right: 20px;
@@ -193,12 +196,31 @@ form
 	margin-top: 50px;
 }
 
-.block_2_element
+.block_ligne
 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;	
 }
+
+
+.block_colonne
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-around;
+}
+
+.block_ligne_autres_info
+{
+	display: flex;
+	justify-content: space-between;	
+	margin: 25px;
+}
+
+
+
 #block_avant_information
 {
 	justify-content: center;
@@ -386,7 +408,7 @@ input[type="radio"]
 	width: 100%;
 	max-width: 70px;
 	height: auto;
-	transition-property: filter;
+	transition-property: filter, transform;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
 	-webkit-filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
@@ -397,6 +419,7 @@ input[type="radio"]
 .premiere_formation img:hover
 {
 	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.3));
+	transform: skew(-0.03turn);
 }
 
 
@@ -544,7 +567,7 @@ footer
 .logo_footer_reseau_sociaux
 {
 	width: 35px;
-	transition-property: width, filter;
+	transition-property: width, filter, transform;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 	align-self: center;
@@ -556,6 +579,7 @@ footer
 {
 	width: 30px;
 	filter: drop-shadow(0px 0px 0px #444);
+	transform: skew(-0.04turn, 18deg);
 }
 
 .logo_partenaire

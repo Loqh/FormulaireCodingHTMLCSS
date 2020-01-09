@@ -44,7 +44,7 @@
 					Formulaire de contact ITESCIA
 				</h1>
 
-				<div id="block_avant_information" class="block_2_element">
+				<div id="block_avant_information" class="block_ligne">
 					<p>
 						<label id='label_date_saisie' for="date_de_saisie">Date:</label>
 						<input type="date" id="date_de_saisie" name="date_de_saisie">				
@@ -88,7 +88,7 @@
 							</p>
 							
 
-							<div class="block_2_element">
+							<div class="block_ligne">
 								<p>
 									<input type="radio" id="DCG_L1" name="premiere_formation" value="DCG L1">
 									<label for="DCG_L1">entrée en L1</label>			
@@ -109,7 +109,7 @@
 								<strong>Contrôleur de Gestion:</strong>
 							</p>
 
-							<div class="block_2_element">
+							<div class="block_ligne">
 								<p>
 									<input type="radio" id="controleur_L3" name="premiere_formation" value="controleur L3">
 									<label for="controleur_L3">entrée en L3</label>		
@@ -149,7 +149,7 @@
 								<strong>Responsable de systèmes de management QHSE</strong>	
 							</p>
 
-							<div class="block_2_element">
+							<div class="block_ligne">
 								<p>
 									<input type="radio" id="RSM_L3" name="premiere_formation" value="RSM L3">
 									<label for="RSM_L3">entrée en L3</label>
@@ -164,7 +164,7 @@
 							<p class="conteneur_texte">
 								<strong>Responsable Ressources Humaines</strong>
 							</p>
-							<div class="block_2_element">
+							<div class="block_ligne">
 								<p>
 									<input type="radio" id="RRH_L3" name="premiere_formation" value="RRH L3">
 									<label for="RRH_L3">entrée en L3</label>
@@ -184,7 +184,7 @@
 							</div>
 							<p>
 								<input type="radio" id="MQPI" name="premiere_formation" value="MQPI">
-								<label for="MQPI"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
+								<label for="MQPI"><strong>Manager Qualité et Processus Intelligents </strong>(entrée en M2)</label>
 							</p>
 						</div>
 					</div>
@@ -215,7 +215,7 @@
 								<p class="conteneur_texte">
 									<strong>En 2 ans en alternance</strong>
 								</p>
-								<div class="block_2_element">
+								<div class="block_ligne">
 									<p class="specialisation">
 										<input type="radio" id="cergy_bac2_alt" name="premiere_formation" value="codeur alternance cergy">
 										<label for="cergy_bac2_alt">à Cergy</label>
@@ -230,7 +230,7 @@
 								<p class="conteneur_texte">
 									<strong>En 1 an en temps plein</strong> (payant)
 								</p>
-								<div class="block_2_element">
+								<div class="block_ligne">
 									<p class="specialisation">
 										<input type="radio" id="cergy_bac2_tp" name="premiere_formation" value="codeur temps plein cergy">
 										<label for="cergy_bac2_tp">à Cergy</label>
@@ -379,25 +379,73 @@
 					</div>
 					<section id="coordonnees" class="autres_info_conteneur">
 
-						<div class="autres_informations_labels"><!--
-							<p class="conteneur_texte"><label for="sexe">sexe:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_nom">Nom:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_prenom">Prenom:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_adresse">Adresse:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_code_postal">Code postale:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_ville">Ville:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_tel_fixe">Tél. fixe:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_portable">Portable:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_email">E-mail:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_date_naissance">Date de naissance:</label></p>
-							<p class="conteneur_texte"><label for="coordonnees_nationalite">Nationalité:</label></p>
-						-->
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="sexe" class="conteneur_texte">sexe:</label>
+								<select name="sexe" id="sexe" >
+									<option value="homme">Homme</option>
+									<option value="femme">Femme</option>
+								</select>
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_nom" class="conteneur_texte">Nom:</label>
+								<input type="text" required="required" id="coordonnees_nom" name="coordonnees_nom">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_prenom" class="conteneur_texte">Prenom:</label>
+								<input type="text" required="required" id="coordonnees_prenom" name="coordonnees_prenom">
+							</div>
+
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_adresse" class="conteneur_texte">Adresse:</label>
+								<input type="text" required="required" id="coordonnees_adresse" name="coordonnees_adresse">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_code_postal" class="conteneur_texte">Code postale:</label>
+								<input type="text" required="required" id="coordonnees_code_postal" name="coordonnees_code_postal">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_ville" class="conteneur_texte">Ville:</label>
+								<input type="text" required="required" id="coordonnees_ville" name="coordonnees_ville">
+							</div>
+
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_tel_fixe" class="conteneur_texte">Tél. fixe:</label>
+								<input type="tel" required="required" id="coordonnees_tel_fixe" name="coordonnees_tel_fixe">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_portable" class="conteneur_texte">Portable:</label>
+								<input type="tel" required="required" id="coordonnees_portable" name="coordonnees_portable">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_email" class="conteneur_texte">E-mail:</label>
+								<input type="email" required="required" id="coordonnees_email" name="coordonnees_email">
+							</div>
+
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_date_naissance" class="conteneur_texte">Date de naissance:</label>
+								<input type="date" required="required" id="coordonnees_date_naissance" name="coordonnees_date_naissance">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_nationalite" class="conteneur_texte">Nationalité:</label>
+								<select name="coordonnees_nationalité" id="coordonnees_nationalite">
+									<option value="francaise">Française</option>
+									<option value="UE">UE</option>
+									<option value="hors UE">Hors UE</option>
+								</select>		
+							</div>
+						</div>
+
+						<!--proposition 2, moins de div , mais plus risqué pour la présentation si pb
+						<div class="autres_informations_labels">
 							<label for="sexe" class="conteneur_texte">sexe:</label>
 							<label for="coordonnees_nom" class="conteneur_texte">Nom:</label>
 							<label for="coordonnees_prenom" class="conteneur_texte">Prenom:</label>
+							
 							<label for="coordonnees_adresse" class="conteneur_texte">Adresse:</label>
 							<label for="coordonnees_code_postal" class="conteneur_texte">Code postale:</label>
 							<label for="coordonnees_ville" class="conteneur_texte">Ville:</label>
+							
 							<label for="coordonnees_tel_fixe" class="conteneur_texte">Tél. fixe:</label>
 							<label for="coordonnees_portable" class="conteneur_texte">Portable:</label>
 							<label for="coordonnees_email" class="conteneur_texte">E-mail:</label>
@@ -413,12 +461,15 @@
 							</select>
 							<input type="text" required="required" id="coordonnees_nom" name="coordonnees_nom">
 							<input type="text" required="required" id="coordonnees_prenom" name="coordonnees_prenom">
+							
 							<input type="text" required="required" id="coordonnees_adresse" name="coordonnees_adresse">
 							<input type="text" required="required" id="coordonnees_code_postal" name="coordonnees_code_postal">
 							<input type="text" required="required" id="coordonnees_ville" name="coordonnees_ville">
+							
 							<input type="tel" required="required" id="coordonnees_tel_fixe" name="coordonnees_tel_fixe">
 							<input type="tel" required="required" id="coordonnees_portable" name="coordonnees_portable">
 							<input type="email" required="required" id="coordonnees_email" name="coordonnees_email">
+							
 							<input type="date" required="required" id="coordonnees_date_naissance" name="coordonnees_date_naissance">
 							<select name="coordonnees_nationalité" id="coordonnees_nationalite">
 								<option value="francaise">Française</option>
@@ -427,12 +478,30 @@
 							</select>
 						</div>
 
+					-->
+
 					</section>
 
 
 					<h2 class="h2">Votre scolarité:</h2>
 					<section id="scolarite" class="autres_info_conteneur">
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="niveau" class="conteneur_texte">Niveau de formation actuel:</label>
+								<input type="text" required="required" id="niveau" name="niveau">
 
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="etablissement" class="conteneur_texte">Etablissement actuel (nom et ville):</label>
+								<input type="text" required="required" id="etablissement" name="etablissement">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="diplome" class="conteneur_texte">Dernier diplôme obtenu:</label>
+								<input type="text" required="required" id="diplome" name="diplome">
+							</div>
+						</div>
+
+						<!--
 						<div class="autres_informations_labels">
 							<label for="niveau" class="conteneur_texte">Niveau de formation actuel:</label>
 							<label for="etablissement" class="conteneur_texte">Etablissement actuel (nom et ville):</label>
@@ -446,6 +515,7 @@
 							<input type="text" required="required" id="diplome" name="diplome">
 
 						</div>
+					-->
 
 					</section>
 
@@ -454,6 +524,32 @@
 
 					<h2 class="h2">Vos autres souhaits de formation à ITESCIA:</h2>
 					<section id="souhaits" class="autres_info_conteneur">
+
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="souhait_2" class="conteneur_texte">N°2:</label>
+								<select name="souhait_2" id="souhait_2">
+									<option value="L1">L1</option>
+									<option value="L2">L2</option>
+									<option value="L3">L3</option>
+									<option value="M1">M1</option>
+									<option value="M2">M2</option>
+								</select>
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="souhait_3" class="conteneur_texte">N°3:</label>
+								<select name="souhait_3" id="souhait_3">
+									<option value="L1">L1</option>
+									<option value="L2">L2</option>
+									<option value="L3">L3</option>
+									<option value="M1">M1</option>
+									<option value="M2">M2</option>
+								</select>
+							</div>
+							
+						</div>
+
+						<!--
 						<div class="autres_informations_labels">
 							<label for="souhait_2" class="conteneur_texte">N°2:</label>
 							<label for="souhait_3" class="conteneur_texte">N°3:</label>
@@ -476,6 +572,7 @@
 								<option value="M2">M2</option>
 							</select>
 						</div>
+					-->
 						
 					</section>
 
@@ -485,7 +582,23 @@
 					<h2 class="h2">Votre parrain à ITESCIA:</h2>
 
 					<section id="parrain" class="autres_info_conteneur">
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="parrain_nom" class="conteneur_texte">Nom:</label>
+								<input type="text" id="parrain_nom" name="parrain_nom">
 
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="parrain_prenom" class="conteneur_texte">Prénom:</label>
+								<input type="text" id="parrain_prenom" name="parrain_prenom">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="formation_parrain" class="conteneur_texte">Formation suivie:</label>
+								<input type="text" id="formation_parrain" name="formation_parrain">
+							</div>
+						</div>
+
+						<!--
 						<div class="autres_informations_labels">
 							<label for="parrain_nom" class="conteneur_texte">Nom:</label>
 							<label for="parrain_prenom" class="conteneur_texte">Prénom:</label>
@@ -498,6 +611,7 @@
 							<input type="text" id="parrain_prenom" name="parrain_prenom">
 							<input type="text" id="formation_parrain" name="formation_parrain">
 						</div>
+					-->
 
 					</section>
 
