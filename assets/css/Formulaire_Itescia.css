@@ -421,7 +421,7 @@ input[type="radio"]
 	padding: 10px;
 	height: 30px;
 	margin: 20px;
-	transition-property: width, background;
+	transition-property: width, background, box-shadow;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
@@ -431,6 +431,7 @@ input[type="radio"]
 {
 	width: 25%;
 	cursor: pointer;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -440,13 +441,15 @@ input[type="radio"]
 
 /* 
 ######################################################################################
+######################################################################################
 ################################## partie footer #####################################
+######################################################################################
 ######################################################################################
 */
 
 footer
 {
-	background: linear-gradient(rgb(86, 101, 115),rgb(66, 81, 95)  );
+	background: linear-gradient(rgb(56, 73, 85),rgb(36, 53, 65));
 	display:flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -504,11 +507,15 @@ footer
 
 
 
-
+/* 
+######################################################################################
+################################## partie logo #######################################
+######################################################################################
+*/
 .logo_footer_reseau_sociaux
 {
 	width: 35px;
-	transition-property: width;
+	transition-property: width, filter;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 	align-self: center;
@@ -519,6 +526,18 @@ footer
 .logo_footer_reseau_sociaux:hover
 {
 	width: 30px;
+	filter: drop-shadow(0px 0px 0px #444);
+}
+
+.logo_partenaire
+{
+	transition-property: width, filter;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+.logo_partenaire:hover
+{
+	filter: drop-shadow(10px 8px 5px #222);
 }
 
 
@@ -527,6 +546,8 @@ footer
 	background-color: white;
 	align-self: center;
 }
+
+
 
 
 #nav_mentions
