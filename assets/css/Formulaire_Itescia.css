@@ -14,6 +14,46 @@ p, em, strong
 	text-align: left;
 }
 
+/*met de l'espace entre les label et les element adjacent horizontalement*/
+label
+{
+		padding-right: 10px;
+		padding-left: 10px;
+		cursor: pointer;
+}
+
+
+
+h1
+{
+	align-self: center;
+	color: rgba(0, 0, 0, .8);
+	padding: 5px;
+	border: 6px ridge rgba(10, 10, 10, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn ,rgba(250, 10, 10, .4) , rgba(250, 10, 10, .8));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
+}
+
+/*donne mise en forme et centre les h2*/
+h2
+{
+	align-self: center;
+	color: rgb(100, 150, 255);
+	text-decoration: underline;
+	padding: 5px;
+	border: 6px ridge rgba(100, 150, 250, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
+}
+
+
+
+
+
 
 #logo_header
 {
@@ -33,7 +73,9 @@ header img
 
 /* 
 ######################################################################################
+######################################################################################
 ################################## partie nav  #######################################
+######################################################################################
 ######################################################################################
 */
 #nav_header
@@ -122,7 +164,9 @@ header img
 
 /* 
 ######################################################################################
+######################################################################################
 ############################### partie formulaire ####################################
+######################################################################################
 ######################################################################################
 */
 form
@@ -138,23 +182,20 @@ form
 {
 	padding: 20px;
 	margin: 25px;
-	border-radius: 20px/20px;
-	transition-property: background;
-	transition-duration: 1s;
-	transition-timing-function: ease-out;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-#conteneur_avant_information p 
+.block_2_element
 {
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;	
 }
 
 
 
 /* 
 ######################################################################################
-########################## separation en deux colonne) ##############################
+########################## separation en deux colonne) ###############################
 ######################################################################################
 */
 .conteneur_formulaire
@@ -169,48 +210,26 @@ form
 
 
 /*marge entre les deux colonne*/
-.premiere_formation
+.premiere_formation, .autres_informations
 {
 	margin-left: 25px;
 	margin-right: 25px;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-
-.autres_informations
-{
-	margin-left: 25px;
-	margin-right: 25px;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-}
 
 
 
 
 /* 
 ######################################################################################
-################################ couleur des colonnes  ###############################
+########################## couleur et forme des colonnes  ############################
 ######################################################################################
 */
 #conteneur_avant_information, .premiere_formation, .autres_informations
 {
 	background: linear-gradient(0.47turn, rgb(220, 220, 235), rgb(180, 180, 180));
-}
-
-
-
-
-
-
-
-/* 
-######################################################################################
-######################### bordure ronde pour colonne formulaire  #####################
-######################################################################################
-*/
-.autres_informations, .autres_info_conteneur,  .premiere_formation
-{
 	border-radius: 20px/20px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -219,38 +238,68 @@ form
 
 /* 
 ######################################################################################
-######### colonne  (permiere formation; ou coordonnées, scolarité, parrain...) #######
+######## colonnes  (permiere formation; ou coordonnées, scolarité, parrain...) #######
 ######################################################################################
 */
-.autres_info_conteneur, .premiere_formation_text, .premiere_formation, .autres_informations
+.premiere_formation_text, .premiere_formation, .autres_informations
 {
-	display: flex;
+	display: flex; 
 	flex-direction: column;
 	padding: 20px;
 }
 
 
-.autres_info_conteneur, .premiere_formation_text
+.autres_info_conteneur
 {
-	background: rgba(220,220,220,0);
-}
-
-/*aligne les paragraphes sur le bord gauche*/
-.autres_info_conteneur p, .premiere_formation_text p
-{
-	align-self: flex-start;
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 20px;
 }
 
-
-
-/*met de l'espace entre les label et les element adjacent horizontalement*/
-p label
+.autres_informations_labels, .autres_informations_inputs
 {
-		padding-right: 10px;
-		padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: left;
 }
+
+/*separation des elements label, input et select verticalement*/
+.autres_informations_labels label, .autres_informations_inputs input, .autres_informations_inputs select
+{
+	margin-top: 20px;
+}
+
+
+
+.autres_informations_labels2
+{
+	display: flex;	
+	justify-content: space-between;
+	align-content: center;
+	margin:10px;
+}
+.autres_informations_labels2 div
+{
+	align-self:  center;
+}
+
+.autres_informations_labels3 
+{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	white-space: nowrap;
+}
+.autres_informations_labels3 div
+{
+	align-self: center;
+	padding: 10px;
+}
+
+
+
 
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select
@@ -265,39 +314,7 @@ input[type="radio"]
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-label
-{
-	cursor: pointer;
-}
 
-
-
-
-h1
-{
-	align-self: center;
-	color: rgba(0, 0, 0, .8);
-	padding: 5px;
-	border: 6px ridge rgba(10, 10, 10, .6);
-	border-radius: 10px;
-	background: linear-gradient(0.47turn ,rgba(250, 10, 10, .4) , rgba(250, 10, 10, .8));
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-	transform: skew(-0.03turn, 0.001turn);
-}
-
-/*donne mise en forme et centre les h2*/
-h2
-{
-	align-self: center;
-	color: rgb(100, 150, 255);
-	text-decoration: underline;
-	padding: 5px;
-	border: 6px ridge rgba(100, 150, 250, .6);
-	border-radius: 10px;
-	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-	transform: skew(-0.03turn, 0.001turn);
-}
 
 
 /*pour les element de classe bac (dans la colonne 1 : premiere formation)*/
@@ -319,7 +336,7 @@ h2
 
 .specialisation
 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 .separateur
@@ -442,7 +459,6 @@ footer
 }
 
 
-
 #nav_footer_reseau_sociaux, #partenaire_itescia
 {
 	display: flex;
@@ -486,7 +502,7 @@ footer
 
 
 
-.logo_footer
+.logo_footer_reseau_sociaux
 {
 	width: 35px;
 	transition-property: width;
@@ -497,7 +513,7 @@ footer
 	filter: drop-shadow(10px 8px 5px #222);
 }
 
-.logo_footer:hover
+.logo_footer_reseau_sociaux:hover
 {
 	width: 30px;
 }
@@ -526,6 +542,13 @@ footer
 	padding: 10px;
 	color: white;
 }
+
+
+
+
+
+
+
 
 
 
