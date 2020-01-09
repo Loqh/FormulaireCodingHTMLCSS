@@ -5,6 +5,7 @@ var conteneur_premiere_formation = document.getElementById('premiere_formation')
 var top_premiere_formation = conteneur_premiere_formation.getBoundingClientRect().top;
 
 var conteneur_formulaire = document.getElementById('conteneur_formulaire');
+var h2 = document.getElementsByTagName('h2');
 refund();
 
 
@@ -14,10 +15,10 @@ window.addEventListener('resize', refund, false)
 function refund(){
 	conteneur_autre_info.style='width:' + (conteneur_premiere_formation.clientWidth-40) + 'px;';
 	//dans l'ideal il faudrait recuperer le padding du  conteneur_premiere_formation pour avoir bien la même taille
-	console.log(conteneur_autre_info.style);
-		console.log(conteneur_autre_info.style.paddingLeft + "czczeczeczz");
 	current_top_autre_info = conteneur_autre_info.getBoundingClientRect().top;
 	if (top_premiere_formation!=current_top_autre_info) {
 		conteneur_formulaire.style='justify-content:center; align-content:center;';	
 	}
+	h2.style='font-size:' + (conteneur_autre_info.getBoundingClientRect().right-conteneur_autre_info.getBoundingClientRect().left) + 'px;';
+	
 }

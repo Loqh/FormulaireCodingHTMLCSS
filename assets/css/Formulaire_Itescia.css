@@ -27,6 +27,7 @@ label
 h1
 {
 	align-self: center;
+	font-size: 120%;
 	color: rgba(0, 0, 0, .8);
 	padding: 5px;
 	border: 6px ridge rgba(10, 10, 10, .6);
@@ -40,7 +41,9 @@ h1
 h2
 {
 	align-self: center;
+	text-align: center;
 	color: rgb(100, 150, 255);
+	width: 90%;
 	text-decoration: underline;
 	padding: 5px;
 	border: 6px ridge rgba(100, 150, 250, .6);
@@ -48,6 +51,7 @@ h2
 	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 	transform: skew(-0.03turn, 0.001turn);
+
 }
 
 
@@ -61,6 +65,8 @@ h2
 	background-color: white;
 	border-color: black;
 }
+
+
 
 
 header img
@@ -80,8 +86,7 @@ header img
 */
 #nav_header
 {
-	height: 50px;
-	/*background: linear-gradient(#57B0E3,#57B0B3);*/
+	width: 100%;
 	background: linear-gradient(rgb(231, 76, 60),rgb(211, 56, 40));
 	display: flex;
 	flex-direction: row;
@@ -96,13 +101,11 @@ header img
 #nav_header a {
 
 	line-height: 50px;
-	word-spacing: 5em;
 	color: black;
 	font-size: 20px;
 
 	padding-right: 20px;
 	padding-left: 20px;
-	/*background-color: rgb(250, 250, 250);*/
 	background: none;
 	
 	position: relative;
@@ -182,6 +185,7 @@ form
 {
 	padding: 20px;
 	margin: 25px;
+	margin-top: 50px;
 }
 
 .block_2_element
@@ -281,7 +285,7 @@ form
 	display: flex;	
 	justify-content: space-between;
 	align-content: center;
-	margin:10px;
+	margin:5px;
 }
 .autres_informations_labels2 div
 {
