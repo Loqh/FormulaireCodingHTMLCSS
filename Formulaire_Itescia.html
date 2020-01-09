@@ -32,11 +32,6 @@
 				<a href="https://www.itescia.fr/" title="allez sur itescia.fr">Itescia</a>
 			</nav>
 
-			<!--
-			<figure><img src="assets/images/itescia_grand.png" alt="logo d'itescia" id="logo_moving" style="width: 30px; height: auto; position: fixed; left: 40px; top: 40px; background: white; 	box-shadow: 20px 16px 10px rgba(0, 0, 0, 0.15);
-"></figure> -->
-	
-
 		</header>
 
 
@@ -72,7 +67,9 @@
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac +2:
+								<div class="conteneur_cadre">
+									bac +2:	
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="BTS_CG" name="premiere_formation" value="BTS CG">
@@ -81,11 +78,15 @@
 						
 
 							<div class="bac">
-								bac +3:
+								<div class="conteneur_cadre">
+									bac +3:
+								</div>
 							</div>
-							<p>
+							
+							<p class="conteneur_texte">
 								<strong>DCG</strong>
 							</p>
+							
 
 							<div class="block_2_element">
 								<p>
@@ -100,9 +101,11 @@
 							
 
 							<div class="bac">
-								bac +4:
+								<div class="conteneur_cadre">
+									bac +4:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Contrôleur de Gestion:</strong>
 							</p>
 
@@ -121,7 +124,9 @@
 
 
 							<div class="bac">
-								bac +5:
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="DSCG" name="premiere_formation" value="DSCG">
@@ -136,9 +141,11 @@
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac +4:
+								<div class="conteneur_cadre">
+									bac +4:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Responsable de systèmes de management QHSE</strong>	
 							</p>
 
@@ -154,7 +161,7 @@
 							</div>
 							
 
-							<p class="separateur">
+							<p class="conteneur_texte">
 								<strong>Responsable Ressources Humaines</strong>
 							</p>
 							<div class="block_2_element">
@@ -171,7 +178,9 @@
 							
 
 							<div class="bac">
-								bac +5:
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="MQPI" name="premiere_formation" value="MQPI">
@@ -188,7 +197,9 @@
 						
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac +2:
+								<div class="conteneur_cadre">
+									bac +2:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="BTS_SIO" name="premiere_formation" value="BTS SIO">
@@ -196,12 +207,12 @@
 							</p>
 
 
-							<p class="separateur">
+							<p class="conteneur_texte">
 								<strong>Codeur informatique:</strong>
 							</p>
 
 							<div>
-								<p>
+								<p class="conteneur_texte">
 									<strong>En 2 ans en alternance</strong>
 								</p>
 								<div class="block_2_element">
@@ -216,7 +227,7 @@
 								</div>
 								
 								
-								<p>
+								<p class="conteneur_texte">
 									<strong>En 1 an en temps plein</strong> (payant)
 								</p>
 								<div class="block_2_element">
@@ -234,19 +245,21 @@
 
 
 							<div class="bac">
-								bac +3 (en 1 an):
+								<div class="conteneur_cadre">
+									bac +3 (en 1 an):
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="LIG" name="premiere_formation" value="LIG">
 								<label for="LIG"><strong>Licence d'Informatique générale</strong></label>
 							</p>
 
-							<p class="separateur">
+							<p class="conteneur_texte">
 								<strong>Concepteur développeur de solution mobiles et connectées</strong>
 							</p>
 
 							<div>
-								<p>
+								<p class="conteneur_texte">
 									<strong>En alternance</strong>
 								</p>
 								<p class="specialisation">
@@ -254,7 +267,7 @@
 									<label for="cergy_bac3_alt">à Cergy</label>
 								</p>
 
-								<p>
+								<p class="conteneur_texte">
 									<strong>En temps plein</strong> (payant)
 								</p>
 								<p class="specialisation">
@@ -266,9 +279,11 @@
 
 
 							<div class="bac">
-								bac +5:
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Manager en Ingénierie Informatique</strong>
 							</p>
 
@@ -358,21 +373,36 @@
 
 				<div id='autres_informations' class="autres_informations">
 
-					<h2 class="h2">Vos coordonnées:</h2> 
+					<div class="autres_informations_labels">
+
+						<h2 class="h2">Vos coordonnées:</h2> 
+					</div>
 					<section id="coordonnees" class="autres_info_conteneur">
 
-						<div class="autres_informations_labels">
-							<label for="sexe">sexe:</label>
-							<label for="coordonnees_nom">Nom:</label>
-							<label for="coordonnees_prenom">Prenom:</label>
-							<label for="coordonnees_adresse">Adresse:</label>
-							<label for="coordonnees_code_postal">Code postale:</label>
-							<label for="coordonnees_ville">Ville:</label>
-							<label for="coordonnees_tel_fixe">Tél. fixe:</label>
-							<label for="coordonnees_portable">Portable:</label>
-							<label for="coordonnees_email">E-mail:</label>
-							<label for="coordonnees_date_naissance">Date de naissance:</label>
-							<label for="coordonnees_nationalite">Nationalité:</label>
+						<div class="autres_informations_labels"><!--
+							<p class="conteneur_texte"><label for="sexe">sexe:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_nom">Nom:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_prenom">Prenom:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_adresse">Adresse:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_code_postal">Code postale:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_ville">Ville:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_tel_fixe">Tél. fixe:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_portable">Portable:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_email">E-mail:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_date_naissance">Date de naissance:</label></p>
+							<p class="conteneur_texte"><label for="coordonnees_nationalite">Nationalité:</label></p>
+						-->
+							<label for="sexe" class="conteneur_texte">sexe:</label>
+							<label for="coordonnees_nom" class="conteneur_texte">Nom:</label>
+							<label for="coordonnees_prenom" class="conteneur_texte">Prenom:</label>
+							<label for="coordonnees_adresse" class="conteneur_texte">Adresse:</label>
+							<label for="coordonnees_code_postal" class="conteneur_texte">Code postale:</label>
+							<label for="coordonnees_ville" class="conteneur_texte">Ville:</label>
+							<label for="coordonnees_tel_fixe" class="conteneur_texte">Tél. fixe:</label>
+							<label for="coordonnees_portable" class="conteneur_texte">Portable:</label>
+							<label for="coordonnees_email" class="conteneur_texte">E-mail:</label>
+							<label for="coordonnees_date_naissance" class="conteneur_texte">Date de naissance:</label>
+							<label for="coordonnees_nationalite" class="conteneur_texte">Nationalité:</label>
 						</div>
 
 
@@ -404,9 +434,9 @@
 					<section id="scolarite" class="autres_info_conteneur">
 
 						<div class="autres_informations_labels">
-							<label for="niveau">Niveau de formation actuel:</label>
-							<label for="etablissement">Etablissement actuel (nom et ville):</label>
-							<label for="diplome">Dernier diplôme obtenu:</label>
+							<label for="niveau" class="conteneur_texte">Niveau de formation actuel:</label>
+							<label for="etablissement" class="conteneur_texte">Etablissement actuel (nom et ville):</label>
+							<label for="diplome" class="conteneur_texte">Dernier diplôme obtenu:</label>
 
 						</div>
 
@@ -425,8 +455,8 @@
 					<h2 class="h2">Vos autres souhaits de formation à ITESCIA:</h2>
 					<section id="souhaits" class="autres_info_conteneur">
 						<div class="autres_informations_labels">
-							<label for="souhait_2">N°2:</label>
-							<label for="souhait_3">N°3:</label>
+							<label for="souhait_2" class="conteneur_texte">N°2:</label>
+							<label for="souhait_3" class="conteneur_texte">N°3:</label>
 						</div>
 
 						<div class="autres_informations_inputs">
@@ -453,12 +483,13 @@
 
 
 					<h2 class="h2">Votre parrain à ITESCIA:</h2>
+
 					<section id="parrain" class="autres_info_conteneur">
 
 						<div class="autres_informations_labels">
-							<label for="parrain_nom">Nom:</label>
-							<label for="parrain_prenom">Prénom:</label>
-							<label for="formation_parrain">Formation suivie:</label>
+							<label for="parrain_nom" class="conteneur_texte">Nom:</label>
+							<label for="parrain_prenom" class="conteneur_texte">Prénom:</label>
+							<label for="formation_parrain" class="conteneur_texte">Formation suivie:</label>
 
 						</div>
 
@@ -493,7 +524,7 @@
 
 
 							<div class="autres_informations_labels2">
-								<p>
+								<p class="conteneur_texte">
 									Responsable Management QHSE:
 								</p>
 								<div class="autres_informations_labels3">
@@ -510,7 +541,7 @@
 
 
 							<div class="autres_informations_labels2">
-								<p>
+								<p class="conteneur_texte">
 									Manager en Ingénierie Informatique:
 								</p>
 								<div class="autres_informations_labels3">
@@ -527,7 +558,7 @@
 
 
 							<div class="autres_informations_labels2">
-								<p>
+								<p class="conteneur_texte">
 									Business Analyst:
 								</p>
 								<div class="autres_informations_labels3">
@@ -540,7 +571,7 @@
 
 
 							<div class="autres_informations_labels2">
-								<p>
+								<p class="conteneur_texte">
 									Manager de la sécurité des risques de l’information:				
 								</p>
 								<div class="autres_informations_labels3">

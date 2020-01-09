@@ -19,6 +19,7 @@ function refund(){
 	if (top_premiere_formation!=current_top_autre_info) {
 		conteneur_formulaire.style='justify-content:center; align-content:center;';	
 	}
-	h2.style='font-size:' + (conteneur_autre_info.getBoundingClientRect().right-conteneur_autre_info.getBoundingClientRect().left) + 'px;';
+
+	
 	
 }
