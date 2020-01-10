@@ -1,0 +1,134 @@
+body
+{
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   background-color: red;
+   margin: 0;
+}
+
+#navigation_bar
+{
+	margin-top: -8px;
+	background-color: white;
+	padding: 10px;
+}
+
+#navigation_bar a
+{
+	color: #333
+}
+
+#navigation_bar_content
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo
+{
+	width: 150px;
+	border: solid;
+	border-color: white;
+}
+
+#section1
+{
+	padding: 5px;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(https://miro.medium.com/max/3856/1*IqLeS9-9f7ojZq7cBS0SFQ.png);
+}
+
+#section1_content
+{	
+	color: white;
+}
+
+#profile
+{
+	background-color: white;
+}
+
+#profile_content
+{
+	padding: 5px;
+}
+
+#profile p
+{
+	max-width: 300px;
+	padding: 2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#skills
+{
+	background-color: #333;
+}
+
+#skills_content
+{
+	color: white;
+	padding: 5px;
+}
+
+#skills p
+{
+	max-width: 300px;
+	padding: 2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mylinks
+{
+	background-color: white;
+}
+
+
+
+#mylinks figure
+{
+	display: inline-block;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#mylinks p
+{
+	max-width: 300px;
+	padding: 2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mylinks_content a
+{
+	padding: 5px;
+	color: #333;
+}
+
+footer 
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #333;
+}
+
+#footer_content
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+#footer_content #circle
+{
+	color: white;
+}
+
+#footer_content #caret
+{
+	color: #333;
+}

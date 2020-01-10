@@ -1,0 +1,179 @@
+body 
+{
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   background-color: red;
+   margin: 0;
+}
+
+header 
+{
+	background-color: white;
+}
+
+#header_content
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header_content p
+{
+	font-size: 20px;
+}
+
+#header_logo
+{
+	height: 50px;
+	background-color: #35a1e8;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+#header_title
+{
+	margin-left: -20px;
+}
+
+#header_text2
+{
+	color: grey;
+}
+
+.header_div
+{
+	display: flex;
+	align-items: center;
+}
+
+.header_div p
+{
+	margin-left: 10px;
+	margin-right: 50px;
+}
+
+#profile
+{
+	background-color: #F9F9F9;
+	padding: 15px;
+}
+
+#profile_content
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#profile_content p
+{
+	max-width: 500px;
+}
+
+#profile_download
+{
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 2px solid #35a1e8;
+    border-radius: 25px;
+	background-color: white;
+}
+
+#profile_download:hover
+{
+	background-color: red;
+}
+
+#profile_text
+{
+	font-size: 25px;
+}
+
+#profile_logo
+{
+	height: 350px;
+	border-radius: 50%;
+}
+
+#skills
+{
+	background-color: white;
+	padding: 15px;
+}
+
+#skills_content p
+{
+	max-width: 300px;
+	margin: auto;
+}
+
+.skills_column
+{
+
+}
+
+#stories
+{
+	padding: 15px;
+	background-color: white;
+}
+
+#stories_content
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#stories_content i
+{
+	color: #35a1e8;
+}
+
+#stories_content p
+{
+	color: grey;
+	opacity: 0.5;
+}
+
+#stories_content h3
+{
+	font-size: 15px;
+}
+
+.stories_box
+{
+	width: 200px;
+	border: solid 2px;
+	border-color: rgba(200, 200, 200, .5);
+	border-radius: 15%;
+}
+
+footer 
+{
+	background-color : white;
+}
+
+#footer_content
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: grey;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#footer_left
+{
+	display: flex;
+}
+
+#footer_left p
+{
+	margin: 10px;
+}
