@@ -262,6 +262,11 @@ form
 	{
 		flex-wrap: wrap;
 	}
+	.premiere_formation, .autres_informations
+
+	{
+		width: 100%;
+	}
 }
 
 
