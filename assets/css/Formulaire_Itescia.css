@@ -205,36 +205,8 @@ form
 	margin-top: 50px;
 }
 
-.block_ligne
-{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;	
-}
 
 
-.block_colonne
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-content: space-around;
-	overflow: scroll;
-}
-
-.block_ligne_autres_info
-{
-	display: flex;
-	justify-content: space-between;	
-	margin: 25px;
-}
-
-
-
-#block_avant_information
-{
-	justify-content: center;
-}
 
 
 /* 
@@ -316,15 +288,51 @@ form
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 20px;
+	padding: 10px;
 	overflow: scroll;
 }
+
+
+
+
+.block_ligne
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;	
+}
+
+
+.block_colonne
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-around;
+	overflow: scroll;
+}
+
+.block_ligne_autres_info
+{
+	display: flex;
+	justify-content: space-between;	
+	margin: 10px;
+}
+
+
+
+#block_avant_information
+{
+	justify-content: center;
+}
+
+
 
 .autres_informations_labels, .autres_informations_inputs
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	text-align: left;
 	overflow: scroll;
 }
@@ -332,7 +340,7 @@ form
 /*separation des elements label, input et select verticalement*/
 .autres_informations_labels label, .autres_informations_inputs input, .autres_informations_inputs select
 {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 
@@ -359,8 +367,10 @@ form
 .autres_informations_labels3 div
 {
 	align-self: center;
-	padding: 10px;
+	padding: 5px;
 }
+
+
 
 
 
