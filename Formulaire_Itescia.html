@@ -6,8 +6,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="assets/css/Formulaire_Itescia.css" />
 		<title>Restons en contact!</title>
-
-
+		<link rel="shortcut icon" type="image/vdn.microsoft.icon" href="https://www.itescia.fr/sites/all/themes/bootstrap_itescia/favicon.ico" />
 
 		
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -17,27 +16,19 @@
 			$( "#datepicker" ).datepicker();
 			} );
 		</script>
-		
 	</head>
 
 
 
 	<body>
-		<header>
+		<header id="header">
 			<figure><img src="assets/images/itescia_grand.png" alt="logo d'itescia" id="logo_header"></figure>
 
 			<nav id="nav_header">
 				<a href="Formulaire_Itescia.html" title="acceder à l'accueil">Accueil</a>
 				<a href="https://www.itescia.fr/" title="allez sur itescia.fr">Itescia</a>
 			</nav>
-
-			<!--
-			<figure><img src="assets/images/itescia_grand.png" alt="logo d'itescia" id="logo_moving" style="width: 30px; height: auto; position: fixed; left: 40px; top: 40px; background: white; 	box-shadow: 20px 16px 10px rgba(0, 0, 0, 0.15);
-"></figure> -->
-	
-
 		</header>
-
 
 
 
@@ -48,19 +39,23 @@
 					Formulaire de contact ITESCIA
 				</h1>
 
-				<p>
-					<label id='label_date_saisie' for="date_de_saisie">Date :</label>
-					<input type="date" id="date_de_saisie" name="date_de_saisie">
+				<div id="block_avant_information" class="block_ligne">
+					<p>
+						<label id='label_date_saisie' for="date_de_saisie">Date:</label>
+						<input type="date" id="date_de_saisie" name="date_de_saisie">				
+					</p>
 
-					<label for="evenement">Evénement :</label>
-					<input type="text" id="evenement" name="evenement">
-				</p>
+					<p>
+						<label for="evenement">Evénement:</label>
+						<input type="text" id="evenement" name="evenement">
+					</p>
+				</div>
 			</div>
 
 
 			<div id="conteneur_formulaire" class="conteneur_formulaire">
 				<section id='premiere_formation' class="premiere_formation">
-					<h2>Votre 1er choix de formation à ITESCIA :</h2>
+					<h2 class="h2">Votre 1er choix de formation à ITESCIA :</h2>
 
 				<!-- Gestion -->
 					<div id="gestion" class="conteneur_formation">
@@ -68,8 +63,11 @@
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac + 2:
+								<div class="conteneur_cadre">
+									bac +2:	
+								</div>
 							</div>
+
 							<p>
 								<input type="radio" id="BTS_CG" name="premiere_formation" value="BTS CG">
 								<label for="BTS_CG"><strong>BTS CG</strong></label>
@@ -77,37 +75,54 @@
 						
 
 							<div class="bac">
-								bac + 3:
+								<div class="conteneur_cadre">
+									bac +3:
+								</div>
 							</div>
-							<p>
+							
+							<p class="conteneur_texte">
 								<strong>DCG</strong>
 							</p>
+							
 
-							<p>
-								<input type="radio" id="DCG_L1" name="premiere_formation" value="DCG L1">
-								<label for="DCG_L1">entrée en L1</label>
-								<input type="radio" id="DCG_L2" name="premiere_formation" value="DCG L2">
-								<label for="DCG_L2">entrée en L2</label>
-							</p>
-						
+							<div class="block_ligne">
+								<p>
+									<input type="radio" id="DCG_L1" name="premiere_formation" value="DCG L1">
+									<label for="DCG_L1">entrée en L1</label>			
+								</p>
+								<p>
+									<input type="radio" id="DCG_L2" name="premiere_formation" value="DCG L2">
+									<label for="DCG_L2">entrée en L2</label>
+								</p>
+							</div>
+							
 
 							<div class="bac">
-								bac + 4:
+								<div class="conteneur_cadre">
+									bac +4:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Contrôleur de Gestion:</strong>
 							</p>
 
-							<p>
-								<input type="radio" id="controleur_L3" name="premiere_formation" value="controleur L3">
-								<label for="controleur_L3">entrée en L3</label>
-								<input type="radio" id="controleur_M1" name="premiere_formation" value="controleur M1">
-								<label for="controleur_M1" >entrée en M1</label>
-							</p>
+							<div class="block_ligne">
+								<p>
+									<input type="radio" id="controleur_L3" name="premiere_formation" value="controleur L3">
+									<label for="controleur_L3">entrée en L3</label>		
+								</p>
+								<p>
+									<input type="radio" id="controleur_M1" name="premiere_formation" value="controleur M1">
+									<label for="controleur_M1" >entrée en M1</label>
+								</p>
+							</div>
+
 
 
 							<div class="bac">
-								bac + 5 :
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="DSCG" name="premiere_formation" value="DSCG">
@@ -116,46 +131,60 @@
 						</div>
 					</div>
 
+
 				<!-- Management -->
 					<div id="management" class="conteneur_formation">
 						<p>	<a href="https://www.itescia.fr/formation-initiale/management" title="plus d'information sur le pole management sur itescia.fr"><img src="assets/images/image_management_transparent.png" alt="" id="img_management"></a> </p>
 
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac + 4 :
+								<div class="conteneur_cadre">
+									bac +4:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Responsable de systèmes de management QHSE</strong>	
 							</p>
 
-							<p>
-								<input type="radio" id="RSM_L3" name="premiere_formation" value="RSM L3">
-								<label for="RSM_L3">entrée en L3</label>
-								<input type="radio" id="RSM_M1" name="premiere_formation" value="RSM M1">
-								<label for="RSM_M1">entrée en M1</label>
-							</p>
+							<div class="block_ligne">
+								<p>
+									<input type="radio" id="RSM_L3" name="premiere_formation" value="RSM L3">
+									<label for="RSM_L3">entrée en L3</label>
+								</p>
+								<p>
+									<input type="radio" id="RSM_M1" name="premiere_formation" value="RSM M1">
+									<label for="RSM_M1">entrée en M1</label>
+								</p>
+							</div>
+							
 
-							<p class="separateur">
+							<p class="conteneur_texte">
 								<strong>Responsable Ressources Humaines</strong>
 							</p>
+							<div class="block_ligne">
+								<p>
+									<input type="radio" id="RRH_L3" name="premiere_formation" value="RRH L3">
+									<label for="RRH_L3">entrée en L3</label>
+								</p>
+								<p>
+									<input type="radio" id="RRH_M1" name="premiere_formation" value="RRH M1">
+									<label for="RRH_M1">entrée en M1</label>
+								</p>
+							</div>
 
-							<p>
-								<input type="radio" id="RRH_L3" name="premiere_formation" value="RRH L3">
-								<label for="RRH_L3">entrée en L3</label>
-								<input type="radio" id="RRH_M1" name="premiere_formation" value="RRH M1">
-								<label for="RRH_M1">entrée en M1</label>
-							</p>
+							
 
 							<div class="bac">
-								bac + 5 :
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="MQPI" name="premiere_formation" value="MQPI">
-								<label for="MQPI"><strong>Manager Qualité et Processus Intelligents</strong>(entrée en M2)</label>
+								<label for="MQPI"><strong>Manager Qualité et Processus Intelligents </strong>(entrée en M2)</label>
 							</p>
 						</div>
 					</div>
-
 
 
 				<!-- Informatique -->
@@ -164,66 +193,79 @@
 						
 						<div class="premiere_formation_text">
 							<div class="bac">
-								bac + 2:
+								<div class="conteneur_cadre">
+									bac +2:
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="BTS_SIO" name="premiere_formation" value="BTS SIO">
 								<label for="BTS_SIO"><strong>BTS SIO, option SISR ou SLAM</strong></label>
 							</p>
 
-							<p class="separateur">
-								<strong>Codeur informatique :</strong>
+
+							<p class="conteneur_texte">
+								<strong>Codeur informatique:</strong>
 							</p>
 
-							<div class="specialisation">
-								<p>
+							<div>
+								<p class="conteneur_texte">
 									<strong>En 2 ans en alternance</strong>
 								</p>
-								<p>
-									<input type="radio" id="cergy_bac2_alt" name="premiere_formation" value="codeur alternance cergy">
-									<label for="cergy_bac2_alt">à Cergy</label>
-									<input type="radio" id="paris_bac2_alt" name="premiere_formation" value="codeur alternance paris">
-									<label for="paris_bac2_alt">à Paris</label>
-								</p>
+								<div class="block_ligne">
+									<p class="specialisation">
+										<input type="radio" id="cergy_bac2_alt" name="premiere_formation" value="codeur alternance cergy">
+										<label for="cergy_bac2_alt">à Cergy</label>
+									</p>
+									<p class="specialisation">
+										<input type="radio" id="paris_bac2_alt" name="premiere_formation" value="codeur alternance paris">
+										<label for="paris_bac2_alt">à Paris</label>
+									</p>
+								</div>
 								
-								<p>
+								
+								<p class="conteneur_texte">
 									<strong>En 1 an en temps plein</strong> (payant)
 								</p>
-								<p>
-									<input type="radio" id="cergy_bac2_tp" name="premiere_formation" value="codeur temps plein cergy">
-									<label for="cergy_bac2_tp">à Cergy</label>
-									<input type="radio" id="paris_bac2_tp" name="premiere_formation" value="codeur alternance temps plein">
-									<label for="paris_bac2_tp">à Paris</label>
-								</p>
+								<div class="block_ligne">
+									<p class="specialisation">
+										<input type="radio" id="cergy_bac2_tp" name="premiere_formation" value="codeur temps plein cergy">
+										<label for="cergy_bac2_tp">à Cergy</label>
+									</p>
+									<p class="specialisation">
+										<input type="radio" id="paris_bac2_tp" name="premiere_formation" value="codeur alternance temps plein">
+										<label for="paris_bac2_tp">à Paris</label>
+									</p>
+								</div>
 							</div>
 
 
 							<div class="bac">
-								bac + 3 (en 1 an) :
+								<div class="conteneur_cadre">
+									bac +3 (en 1 an):
+								</div>
 							</div>
 							<p>
 								<input type="radio" id="LIG" name="premiere_formation" value="LIG">
 								<label for="LIG"><strong>Licence d'Informatique générale</strong></label>
 							</p>
 
-							<p class="separateur">
+							<p class="conteneur_texte">
 								<strong>Concepteur développeur de solution mobiles et connectées</strong>
 							</p>
 
-							<div class="specialisation">
-
-								<p>
+							<div>
+								<p class="conteneur_texte">
 									<strong>En alternance</strong>
 								</p>
-								<p>
+								<p class="specialisation">
 									<input type="radio" id="cergy_bac3_alt" name="premiere_formation" value="CDSMC alternance cergy">
 									<label for="cergy_bac3_alt">à Cergy</label>
 								</p>
 
-								<p>
+								<p class="conteneur_texte">
 									<strong>En temps plein</strong> (payant)
 								</p>
-								<p>
+								<p class="specialisation">
 									<input type="radio" id="paris_bac3_tp" name="premiere_formation" value="CDSMC temps plein">
 									<label for="paris_bac3_tp">à Paris</label>
 								</p>
@@ -232,9 +274,11 @@
 
 
 							<div class="bac">
-								bac + 5 :
+								<div class="conteneur_cadre">
+									bac +5:
+								</div>
 							</div>
-							<p>
+							<p class="conteneur_texte">
 								<strong>Manager en Ingénierie Informatique</strong>
 							</p>
 
@@ -244,9 +288,8 @@
 							</p>
 
 							<p>
-								entrée en M1, spécialisation :
+								entrée en M1, spécialisation:
 							</p>
-
 							<div class="specialisation">
 								<p>
 									<input type="radio" id="M1_MSC_C" name="premiere_formation" value="M1 cybersecurite">
@@ -285,9 +328,9 @@
 							</div>
 
 
-								<p>
-									entrée en M2, spécialisation :
-								</p>
+							<p>
+								entrée en M2, spécialisation:
+							</p>
 
 							<div class="specialisation">
 								<p>
@@ -299,7 +342,6 @@
 									<input type="radio" id="msc_ibi" name="premiere_formation" value="M2 international business for IT">
 									<label for="msc_ibi"><strong>MSc International Business for IT</strong></label>
 								</p>
-
 							</div>
 
 							<p class="separateur">
@@ -322,225 +364,273 @@
 
 
 
-				<div id='autres_informations' class="autres_informations"> 
+				<div id='autres_informations' class="autres_informations">
+
+					<div class="autres_informations_labels">
+						<h2 class="h2">Vos coordonnées:</h2> 
+					</div>
+
 					<section id="coordonnees" class="autres_info_conteneur">
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="sexe" class="conteneur_texte">sexe:</label>
+								<select name="sexe" id="sexe" >
+									<option value="homme">Homme</option>
+									<option value="femme">Femme</option>
+								</select>
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_nom" class="conteneur_texte">Nom:</label>
+								<input type="text" required="required" id="coordonnees_nom" name="coordonnees_nom">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_prenom" class="conteneur_texte">Prenom:</label>
+								<input type="text" required="required" id="coordonnees_prenom" name="coordonnees_prenom">
+							</div>
 
-						<h2 class="coordonnees">Vos coordonnées :</h2>
-						<p>
-							<label for="sexe">sexe :</label>
-							<select name="sexe" id="sexe" >
-								<option value="homme">Homme</option>
-								<option value="femme">Femme</option>
-							</select>
-						</p>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_adresse" class="conteneur_texte">Adresse:</label>
+								<input type="text" required="required" id="coordonnees_adresse" name="coordonnees_adresse">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_code_postal" class="conteneur_texte">Code postale:</label>
+								<input type="text" required="required" id="coordonnees_code_postal" name="coordonnees_code_postal">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_ville" class="conteneur_texte">Ville:</label>
+								<input type="text" required="required" id="coordonnees_ville" name="coordonnees_ville">
+							</div>
 
-						<p>
-							<label for="coordonnees_nom">Nom :</label>
-							<input type="text" required="required" id="coordonnees_nom" name="coordonnees_nom">
-						</p>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_tel_fixe" class="conteneur_texte">Tél. fixe:</label>
+								<input type="tel" required="required" id="coordonnees_tel_fixe" name="coordonnees_tel_fixe">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_portable" class="conteneur_texte">Portable:</label>
+								<input type="tel" required="required" id="coordonnees_portable" name="coordonnees_portable">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_email" class="conteneur_texte">E-mail:</label>
+								<input type="email" required="required" id="coordonnees_email" name="coordonnees_email">
+							</div>
 
-						<p>
-							<label for="coordonnees_prenom">Prenom :</label>
-							<input type="text" required="required" id="coordonnees_prenom" name="coordonnees_prenom">
-						</p>
-
-						<p>
-							<label for="coordonnees_adresse">Adresse :</label>
-							<input type="text" required="required" id="coordonnees_adresse" name="coordonnees_adresse">
-						</p>
-
-						<p>
-							<label for="coordonnees_code_postal">Code postale :</label>
-							<input type="text" required="required" id="coordonnees_code_postal" name="coordonnees_code_postal">
-						</p>
-
-						<p>
-							<label for="coordonnees_ville">Ville :</label>
-							<input type="text" required="required" id="coordonnees_ville" name="coordonnees_ville">
-						</p>
-
-						<p>
-							<label for="coordonnees_tel_fixe">Tél. fixe :</label>
-							<input type="tel" required="required" id="coordonnees_tel_fixe" name="coordonnees_tel_fixe">
-						</p>
-
-						<p>
-							<label for="coordonnees_portable">Portable :</label>
-							<input type="tel" required="required" id="coordonnees_portable" name="coordonnees_portable">
-						</p>
-
-						<p>
-							<label for="coordonnees_email">E-mail :</label>
-							<input type="email" required="required" id="coordonnees_email" name="coordonnees_email">
-						</p>
-
-						<p>
-							<label for="coordonnees_date_naissance">Date de naissance :</label>
-							<input type="date" required="required" id="coordonnees_date_naissance" name="coordonnees_date_naissance">
-						</p>
-
-						<p>
-							<label for="coordonnees_nationalite">Nationalité :</label>
-							<select name="coordonnees_nationalité" id="coordonnees_nationalite">
-								<option value="francaise">Française</option>
-								<option value="UE">UE</option>
-								<option value="hors UE">Hors UE</option>
-							</select>
-						</p>
-
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_date_naissance" class="conteneur_texte">Date de naissance:</label>
+								<input type="date" required="required" id="coordonnees_date_naissance" name="coordonnees_date_naissance">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="coordonnees_nationalite" class="conteneur_texte">Nationalité:</label>
+								<select name="coordonnees_nationalité" id="coordonnees_nationalite">
+									<option value="francaise">Française</option>
+									<option value="UE">UE</option>
+									<option value="hors UE">Hors UE</option>
+								</select>		
+							</div>
+						</div>
 					</section>
 
 
+					<h2 class="h2">Votre scolarité:</h2>
 					<section id="scolarite" class="autres_info_conteneur">
-
-						<h2 class="scolarite">Votre scolarité :</h2>
-
-						<p>
-							<label for="niveau">Niveau de formation actuel :</label>
-							<input type="text" required="required" id="niveau" name="niveau">
-						</p>
-
-						<p>
-							<label for="etablissement">Etablissement actuel (nom et ville) :</label>
-							<input type="text" required="required" id="etablissement" name="etablissement">
-						</p>
-
-						<p>
-							<label for="diplome">Dernier diplôme obtenu :</label>
-							<input type="text" required="required" id="diplome" name="diplome">
-						</p>
-
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="niveau" class="conteneur_texte">Niveau de formation actuel:</label>
+								<input type="text" required="required" id="niveau" name="niveau">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="etablissement" class="conteneur_texte">Etablissement actuel (nom et ville):</label>
+								<input type="text" required="required" id="etablissement" name="etablissement">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="diplome" class="conteneur_texte">Dernier diplôme obtenu:</label>
+								<input type="text" required="required" id="diplome" name="diplome">
+							</div>
+						</div>
 					</section>
 
 
+
+
+					<h2 class="h2">Vos autres souhaits de formation à ITESCIA:</h2>
 					<section id="souhaits" class="autres_info_conteneur">
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="souhait_2" class="conteneur_texte">N°2:</label>
+								<select name="souhait_2" id="souhait_2">
+									<option value="L1">L1</option>
+									<option value="L2">L2</option>
+									<option value="L3">L3</option>
+									<option value="M1">M1</option>
+									<option value="M2">M2</option>
+								</select>
+							</div>
 
-						<h2 class="souhaits">Vos autres souhaits de formation à ITESCIA :</h2>
-
-						<p>
-							<label for="souhait_2">N°2 :</label>
-							<select name="souhait_2" id="souhait_2">
-								<option value="L1">L1</option>
-								<option value="L2">L2</option>
-								<option value="L3">L3</option>
-								<option value="M1">M1</option>
-								<option value="M2">M2</option>
-							</select>
-						</p>
-
-						<p>
-							<label for="souhait_3">N°3 :</label>
-							<select name="souhait_3" id="souhait_3">
-								<option value="L1">L1</option>
-								<option value="L2">L2</option>
-								<option value="L3">L3</option>
-								<option value="M1">M1</option>
-								<option value="M2">M2</option>
-							</select>
-						</p>
+							<div class='block_ligne_autres_info'>
+								<label for="souhait_3" class="conteneur_texte">N°3:</label>
+								<select name="souhait_3" id="souhait_3">
+									<option value="L1">L1</option>
+									<option value="L2">L2</option>
+									<option value="L3">L3</option>
+									<option value="M1">M1</option>
+									<option value="M2">M2</option>
+								</select>
+							</div>
+						</div>	
 					</section>
 
 
+
+					<h2 class="h2">Votre parrain à ITESCIA:</h2>
 					<section id="parrain" class="autres_info_conteneur">
-
-						<h2 class="parrain">Votre parrain à ITESCIA :</h2>
-
-						<p>
-							<label for="parrain_nom">Nom :</label>
-							<input type="text" id="parrain_nom" name="parrain_nom">
-						</p>
-
-						<p>
-							<label for="parrain_prenom">Prénom :</label>
-							<input type="text" id="parrain_prenom" name="parrain_prenom">
-						</p>
-
-						<p>
-							<label for="formation_parrain">Formation suivie :</label>
-							<input type="text" id="formation_parrain" name="formation_parrain">
-						</p>
-
+						<div class="block_colonne">
+							<div class='block_ligne_autres_info'>
+								<label for="parrain_nom" class="conteneur_texte">Nom:</label>
+								<input type="text" id="parrain_nom" name="parrain_nom">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="parrain_prenom" class="conteneur_texte">Prénom:</label>
+								<input type="text" id="parrain_prenom" name="parrain_prenom">
+							</div>
+							<div class='block_ligne_autres_info'>
+								<label for="formation_parrain" class="conteneur_texte">Formation suivie:</label>
+								<input type="text" id="formation_parrain" name="formation_parrain">
+							</div>
+						</div>
 					</section>
 
 
+					<h2 class="h2">Formation continue:</h2>
 					<section id="votre_formation" class="autres_info_conteneur">
-
-						<h2 class="formation">Formation continue :</h2>
-
-						<p>
-							Contrôleur de Gestion
-							<label for="gestion_VAE">VAE :</label>
-							<input type="radio" id="gestion_VAE" name="formation_continue" value="controleur de gestion VAE">
-							<label for="gestion_part_time">Part-time :</label>
-							<input type="radio" id="gestion_part_time" name="formation_continue" value="controleur de gestion Part-time">
-
-						</p>
-
-						<p>
-							Responsable Management QHSE :
-							<label for="QHSE_VAE">VAE :</label>
-							<input type="radio" id="QHSE_VAE" name="formation_continue" value="responsable management QHSE VAE">
-							<label for="QHSE_part_time">Part-time :</label>
-							<input type="radio" id="QHSE_part_time" name="formation_continue" value="responsable management QHSE Part-time">
-
-						</p>
-
-						<p>
-							Manager en Ingénierie Informatique :
-							<label for="manager_info_VAE">VAE :</label>
-							<input type="radio" id="manager_info_VAE" name="formation_continue" value="manager en ingenierie informatique VAE">
-							<label for="manager_info_part_time">Part-time :</label>
-							<input type="radio" id="manager_info_part_time" name="formation_continue" value="manager en ingenierie informatique Part-time">
-
-						</p>
-
-						<p>
-							Business Analyst :
-							<label for="analyst_part_time">Part-time :</label>
-							<input type="radio" id="analyst_part_time" name="formation_continue" value="business analyst Part-time">
-
-						</p>
-
-						<p>
-							Manager de la sécurité des risques de l’information :
-							<label for="securite_part_time">Part-time :</label>
-							<input type="radio" id="securite_part_time" name="formation_continue" value="manager de la securite des risques de l'information Part-time">
-
-						</p>
+						<div class="autres_informations_labels">
+							<div class="autres_informations_labels2">
+								<p>
+									Contrôleur de Gestion
+								</p>
+								<div class="autres_informations_labels3">
+									<div>
+										<label for="gestion_VAE">VAE:</label>
+										<input type="radio" id="gestion_VAE" name="formation_continue" value="controleur de gestion VAE">
+									</div>
+									<div>
+										<label for="gestion_part_time">Part-time:</label>
+										<input type="radio" id="gestion_part_time" name="formation_continue" value="controleur de gestion Part-time">	
+									</div>
+								</div>
+							</div>
 
 
+							<div class="autres_informations_labels2">
+								<p class="conteneur_texte">
+									Responsable Management QHSE:
+								</p>
+								<div class="autres_informations_labels3">
+									<div>
+										<label for="QHSE_VAE">VAE:</label>
+										<input type="radio" id="QHSE_VAE" name="formation_continue" value="responsable management QHSE VAE">
+									</div>
+									<div>
+										<label for="QHSE_part_time">Part-time:</label>
+										<input type="radio" id="QHSE_part_time" name="formation_continue" value="responsable management QHSE Part-time">	
+									</div>	
+								</div>
+							</div>
 
-						<h2 class="formation">votre Situation :</h2>
 
-						<p>
-							<input type="radio" id="situation_salarie" name="situation">
-							<label for="situation_salarie">Salarié(e), de l'entreprise :</label>
-							<input type="text" name="situation_salarie_text">
-						</p>
+							<div class="autres_informations_labels2">
+								<p class="conteneur_texte">
+									Manager en Ingénierie Informatique:
+								</p>
+								<div class="autres_informations_labels3">
+									<div>
+										<label for="manager_info_VAE">VAE:</label>
+										<input type="radio" id="manager_info_VAE" name="formation_continue" value="manager en ingenierie informatique VAE">
+									</div>
+									<div>
+										<label for="manager_info_part_time">Part-time:</label>
+										<input type="radio" id="manager_info_part_time" name="formation_continue" value="manager en ingenierie informatique Part-time">	
+									</div>
+								</div>
+							</div>
 
-						<p>
-							<input type="radio" id="situation_demandeur" name="situation">
-							<label for="situation_demandeur">Demandeur d'emploi:</label>
-						</p>
 
-						<p>
-							<input type="radio" id="situation_particulier" name="situation">
-							<label for="situation_particulier">Particulier :</label>
-						</p>
+							<div class="autres_informations_labels2">
+								<p class="conteneur_texte">
+									Business Analyst:
+								</p>
+								<div class="autres_informations_labels3">
+									<div>
+										<label for="analyst_part_time">Part-time:</label>							
+										<input type="radio" id="analyst_part_time" name="formation_continue" value="business analyst Part-time">
+									</div>									
+								</div>
+							</div>
 
-						<p>
-							<input type="radio" id="situation_autre" name="situation">
-							<label for="situation_autre">Autre :</label>
-							<input type="text" name="situation_autre_text">
-						</p>
 
+							<div class="autres_informations_labels2">
+								<p class="conteneur_texte">
+									Manager de la sécurité des risques de l’information:				
+								</p>
+								<div class="autres_informations_labels3">
+									<div>
+										<label for="securite_part_time">Part-time:</label>
+										<input type="radio" id="securite_part_time" name="formation_continue" value="manager de la securite des risques de l'information Part-time">
+									</div>
+								</div>						
+							</div>
+
+
+							<h2 class="h2">votre Situation:</h2>
+							<div class="autres_informations_labels2">
+								<div class="autres_informations_labels3">
+									<div >
+										<input type="radio" id="situation_salarie" name="situation">
+										<label for="situation_salarie">Salarié(e), de l'entreprise:</label>
+									</div>
+								</div>
+								<div>
+									<input type="text" name="situation_salarie_text">	
+								</div>
+							</div>
+
+
+							<div class="autres_informations_labels2">
+								<div class="autres_informations_labels3">
+									<div >
+										<input type="radio" id="situation_demandeur" name="situation">
+										<label for="situation_demandeur">Demandeur d'emploi:</label>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="autres_informations_labels2">
+								<div class="autres_informations_labels3">
+									<div >
+										<input type="radio" id="situation_particulier" name="situation">
+										<label for="situation_particulier">Particulier:</label>
+									</div>
+								</div>
+							</div>
+							
+
+							<div class="autres_informations_labels2">
+								<div class="autres_informations_labels3">
+									<div >
+										<input type="radio" id="situation_autre" name="situation">
+										<label for="situation_autre">Autre:</label>
+									</div>
+								</div>
+								<div>
+									<input type="text" name="situation_autre_text">
+								</div>
+							</div>
+						</div>
 					</section>
-
 				</div>
 			</div>
 
 			<div class="conteneur_bouton">
-				<input type="submit" id="bouton_valider" name="bouton_valider"> <!-- pour un bouton tel que valider les modif-->
+				<input type="submit" id="bouton_valider" name="bouton_valider"> 
 				<input type="reset" id="bouton_reinitialiser" name="bouton_reinitialiser">
 			</div>
 		</form>
@@ -549,28 +639,66 @@
 
 
 		<footer>
-			<nav id="nav_footer">
-				<a href="https://www.itescia.fr/" title="acceder à itescia.fr"><figure><img src="assets/images/itescia.png" alt="logo d'itescia" id="logo_itescia" class="logo_footer"></figure></a>
+			<div class="footer_1">
+				<div class="footer_texte">
+					suivez nous sur les réseaux sociaux
+				</div>
+				<nav id="nav_footer_reseau_sociaux">
+					<a href="https://www.facebook.com/itescia/" title="acceder à la page facebook d'itescia"><figure><img src="https://www.itescia.fr/sites/itescia/files/social_network/logo-facebook.png" alt="logo facebook"  id="logo_fb" class="logo_footer_reseau_sociaux"></figure></a>
 
-				<a href="https://www.facebook.com/itescia/" title="acceder à la page facebook d'itescia"><figure><img src="assets/images/fb_logo.png" alt="logo facebook"  id="logo_fb" class="logo_footer"></figure></a>
+					<a href="https://twitter.com/ITESCIA" title="acceder au compte twitter d'itescia"><figure><img src="https://www.itescia.fr/sites/itescia/files/social_network/logo-twitter.png" alt="logo twitter"  id="logo_twitter" class="logo_footer_reseau_sociaux"></figure></a>
+					
+					<a href="https://www.linkedin.com/school/itescia/" title="acceder au linkedin d'itescia"><figure><img src="https://www.itescia.fr/sites/itescia/files/social_network/logo-linkedin.png" alt="logo linkedin"  id="logo_linkedin" class="logo_footer_reseau_sociaux"></figure></a>
+					
+					<a href="https://www.youtube.com/channel/UCAhB6gZz4lFwtbXqhzkyVDg" title="acceder au compte youtube d'itescia"><figure><img src="https://www.itescia.fr/sites/itescia/files/social_network/logo-youtube.png" alt="logo youtube"  id="logo_youtube" class="logo_footer_reseau_sociaux"></figure></a>
+					
+					<a href="https://www.instagram.com/itescia_officiel/" title="acceder au compte instagram d'itescia"><figure><img src="https://www.itescia.fr/sites/itescia/files/social_network/logo-instagram_0.png" alt="logo instagram"  id="logo_instagram" class="logo_footer_reseau_sociaux"></figure></a>
+				</nav>
+				<div class="footer_separateur">
+					PARTENAIRES
+				</div>
+			</div>
 
-				<a href="https://twitter.com/ITESCIA" title="acceder au compte twitter d'itescia"><figure><img src="assets/images/twitter_logo.png" alt="logo twitter"  id="logo_twitter" class="logo_footer"></figure></a>
-				
-				<a href="https://www.linkedin.com/school/itescia/" title="acceder au linkedin d'itescia"><figure><img src="assets/images/linkedin_logo.png" alt="logo linkedin"  id="logo_linkedin" class="logo_footer"></figure></a>
-				
-				<a href="https://www.youtube.com/channel/UCAhB6gZz4lFwtbXqhzkyVDg" title="acceder au compte youtube d'itescia"><figure><img src="assets/images/youtube_logo.png" alt="logo youtube"  id="logo_youtube" class="logo_footer"></figure></a>
-				
-				<a href="https://www.instagram.com/itescia_officiel/" title="acceder au compte instagram d'itescia"><figure><img src="assets/images/instagram_logo.png" alt="logo instagram"  id="logo_instagram" class="logo_footer"></figure></a>
 
+		
+			<nav id="partenaire_itescia">
+				<a href="http://www.cci-paris-idf.fr/" title="accès au site de la CCI Paris île-de-france"><figure><img src="https://www.itescia.fr/sites/itescia/files/styles/logo_part/public/thumbnails/image/logo-cci-une-ecole-de.png?itok=AjN6qAVL" alt="logo CCI"  id="logo_CCI" class="logo_partenaire"></figure></a>
+
+				<a href="https://www.chacunsavoie.com/" title="accès au site de chacunsavoie"><figure><img src="https://www.itescia.fr/sites/itescia/files/styles/logo_part/public/thumbnails/image/logo-chacun-sa-voie.png?itok=L7DcDvI_" alt="logo chacunsavoie"  id="logo_chacun_sa_voie" class="logo_partenaire"></figure></a>
+				
+				<a href="http://www.europeidf.fr/" title="accès au site du FSE"><figure><img src="https://www.itescia.fr/sites/itescia/files/styles/logo_part/public/thumbnails/image/logo-fse-ile-de-france-2018.png?itok=AOE5-AKX" alt="logo FSE île-de-france"  id="logo_FSE"  class="logo_partenaire"></figure></a>
+				
+				<a href="https://www.caissedesdepots.fr/investissements-davenir" title="accès au site du Programme d'Investissements d'Avenir"><figure><img src="assets/images/logo-pia.png" alt="logo PIA"  id="logo_PIA" class="logo_partenaire"></figure></a>
+				
+				<a href="http://www.universiteparisseine.fr/" title="accès au site de l'université Paris Seine"><figure><img src="assets/images/logo2-universite-paris-seine_membre.png" alt="logo Paris Seine"  id="logo_paris_seine" class="logo_partenaire"></figure></a>
+			</nav>
+			
+
+
+			<nav id="nav_mentions" class="nav_mentions">
+					<a href="https://www.itescia.fr/mentions-legales" title="mentions légales">Mentions légales</a>
+
+					<a href="https://www.itescia.fr/sitemap" title="plan du site">Plan du site</a>
+					
+					<a href="https://www.itescia.fr/actualites" title="actualités">Actualités</a>
+					
+					<a href="https://www.itescia.fr/evenements" title="evénements">Evénements</a>
+					
+					<a href="https://www.itescia.fr/contact-1" title="contact et accès">Contact et accès</a>
 			</nav>
 
+
+			<div class="fin_footer">
+				<div class="copyright">
+					© Copyright ITESCIA 2020
+				</div>
+			</div>
 		</footer>
 
 		
 		<script src="assets/js/manageDate.js"></script>
 		<script src="assets/js/resizeColonne2.js"></script>
-
-
+		<script src="assets/js/onScroll.js"></script>
 
 	</body>
 </html>

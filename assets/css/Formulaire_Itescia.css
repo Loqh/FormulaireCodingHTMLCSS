@@ -1,10 +1,26 @@
+
+@font-face{
+	font-family: itescia;
+	src: url("https://www.itescia.fr/sites/all/themes/bootstrap_itescia/fonts/glyphicons-halflings-regular.woff2");
+	font-display: auto;
+
+}
+
+html
+{
+	min-width: 250px;
+}
+
+
 body
 {
    font-family: Arial, Helvetica, sans-serif;
    margin-left: auto;
    margin-right: auto;
    text-align: center;
+   min-width: 250px;
 }
+
 
 
 p, em, strong
@@ -14,6 +30,52 @@ p, em, strong
 	text-align: left;
 }
 
+/*met de l'espace entre les label et les element adjacent horizontalement*/
+label
+{
+		padding-right: 10px;
+		padding-left: 10px;
+		cursor: pointer;
+}
+
+
+
+h1
+{
+	align-self: center;
+	color: rgba(0, 0, 0, .8);
+	padding: 5px;
+	border: 6px ridge rgba(10, 10, 10, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn ,rgba(250, 10, 10, .4) , rgba(250, 10, 10, .8));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
+}
+
+/*donne mise en forme et centre les h2*/
+h2
+{
+	align-self: center;
+	text-align: center;
+	color: rgb(100, 150, 255);
+	width: 90%;
+	max-height: 70px;
+	text-decoration: underline;
+	padding: 5px;
+	border: 6px ridge rgba(100, 150, 250, .6);
+	border-radius: 10px;
+	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transform: skew(-0.03turn, 0.001turn);
+	overflow:scroll;
+}
+
+
+
+
+
+
+
 
 #logo_header
 {
@@ -21,6 +83,8 @@ p, em, strong
 	background-color: white;
 	border-color: black;
 }
+
+
 
 
 header img
@@ -33,60 +97,58 @@ header img
 
 /* 
 ######################################################################################
+######################################################################################
 ################################## partie nav  #######################################
+######################################################################################
 ######################################################################################
 */
 #nav_header
 {
-	height: 50px;
-	background: linear-gradient(#57B0E3,#57B0B3);
+	width: 100%;
+	background: linear-gradient(rgb(204, 12, 28), rgb(204, 32, 48));
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	padding: 20px;
 	box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 
 
-
 #nav_header a {
-	width: 10%;
-	line-height: 50px;
-	word-spacing: 5em;
-	border: groove;
-	border-color: black;
-	border-radius: 5px;
-	color: black;
 
-	margin-right: 20px;
-	margin-left: 20px;
+	line-height: 50px;
+	color: white;
+	font-size: 20px;
+	font-family: itescia, Arial, Helvetica, sans-serif;
+
+
 	padding-right: 20px;
 	padding-left: 20px;
-	background-color: rgb(250, 250, 250);
-	
-	transition-property: background-color, border-radius, width, color;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-out;
+	background: none;
 	
 	position: relative;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	transition-property: background;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
 
 }
 
 
 #nav_header a:hover
 {
-	background-color: rgb(220, 220, 235);
-	border-radius: 80px /20px;
-	width: 20%;
+	background: rgb(220, 220, 235);
+	color: black;
 }
 
 #nav_header a:visited
 {
-	color: red;
+	color: white;
+}
+#nav_header a:visited:hover
+{
+	color: black;
 }
 
 #nav_header a:active
@@ -125,7 +187,9 @@ header img
 
 /* 
 ######################################################################################
+######################################################################################
 ############################### partie formulaire ####################################
+######################################################################################
 ######################################################################################
 */
 form
@@ -141,23 +205,43 @@ form
 {
 	padding: 20px;
 	margin: 25px;
-	border-radius: 20px/20px;
-	transition-property: background;
-	transition-duration: 1s;
-	transition-timing-function: ease-out;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	margin-top: 50px;
 }
 
-#conteneur_avant_information p 
+.block_ligne
 {
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;	
 }
 
+
+.block_colonne
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-around;
+}
+
+.block_ligne_autres_info
+{
+	display: flex;
+	justify-content: space-between;	
+	margin: 25px;
+}
+
+
+
+#block_avant_information
+{
+	justify-content: center;
+}
 
 
 /* 
 ######################################################################################
-########################## separation en deux colonne) ##############################
+########################## separation en deux colonne) ###############################
 ######################################################################################
 */
 .conteneur_formulaire
@@ -167,53 +251,43 @@ form
 	justify-content: space-between;
 	align-content: center;
 	padding-bottom: 20px;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+}
+
+.conteneur_formulaire>*
+{
+	margin:15px;
+}
+
+@media screen and (max-width:1100px){
+	.conteneur_formulaire
+	{
+		flex-wrap: wrap;
+	}
 }
 
 
 /*marge entre les deux colonne*/
-.premiere_formation
+.premiere_formation, .autres_informations
 {
 	margin-left: 25px;
 	margin-right: 25px;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-
-.autres_informations
-{
-	margin-left: 25px;
-	margin-right: 25px;
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-}
 
 
 
 
 /* 
 ######################################################################################
-################################ couleur des colonnes  ###############################
+########################## couleur et forme des colonnes  ############################
 ######################################################################################
 */
 #conteneur_avant_information, .premiere_formation, .autres_informations
 {
 	background: linear-gradient(0.47turn, rgb(220, 220, 235), rgb(180, 180, 180));
-}
-
-
-
-
-
-
-
-/* 
-######################################################################################
-######################### bordure ronde pour colonne formulaire  #####################
-######################################################################################
-*/
-.autres_informations, .autres_info_conteneur,  .premiere_formation
-{
 	border-radius: 20px/20px;
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -222,38 +296,68 @@ form
 
 /* 
 ######################################################################################
-######### colonne  (permiere formation; ou coordonnées, scolarité, parrain...) #######
+######## colonnes  (permiere formation; ou coordonnées, scolarité, parrain...) #######
 ######################################################################################
 */
-.autres_info_conteneur, .premiere_formation_text, .premiere_formation
+.premiere_formation_text, .premiere_formation, .autres_informations
 {
-	display: flex;
+	display: flex; 
 	flex-direction: column;
 	padding: 20px;
 }
 
 
-.autres_info_conteneur, .premiere_formation_text
+.autres_info_conteneur
 {
-	background: rgba(220,220,220,0);
-}
-
-/*aligne les paragraphes sur le bord gauche*/
-.autres_info_conteneur p, .premiere_formation_text p
-{
-	align-self: flex-start;
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 20px;
 }
 
-
-
-/*met de l'espace entre les label et les element adjacent horizontalement*/
-p label
+.autres_informations_labels, .autres_informations_inputs
 {
-		padding-right: 10px;
-		padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: left;
 }
+
+/*separation des elements label, input et select verticalement*/
+.autres_informations_labels label, .autres_informations_inputs input, .autres_informations_inputs select
+{
+	margin-top: 20px;
+}
+
+
+
+.autres_informations_labels2
+{
+	display: flex;	
+	justify-content: space-between;
+	align-content: center;
+	margin:5px;
+}
+.autres_informations_labels2 div
+{
+	align-self:  center;
+}
+
+.autres_informations_labels3 
+{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	white-space: nowrap;
+}
+.autres_informations_labels3 div
+{
+	align-self: center;
+	padding: 10px;
+}
+
+
+
 
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select
@@ -268,39 +372,7 @@ input[type="radio"]
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 }
 
-label
-{
-	cursor: pointer;
-}
 
-
-
-
-h1
-{
-	align-self: center;
-	color: rgba(0, 0, 0, .8);
-	padding: 5px;
-	border: 6px ridge rgba(10, 10, 10, .6);
-	border-radius: 10px;
-	background: linear-gradient(0.47turn ,rgba(250, 10, 10, .4) , rgba(250, 10, 10, .8));
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-	transform: skew(-0.03turn, 0.001turn);
-}
-
-/*donne mise en forme et centre les h2*/
-h2
-{
-	align-self: center;
-	color: rgb(100, 150, 255);
-	text-decoration: underline;
-	padding: 5px;
-	border: 6px ridge rgba(100, 150, 250, .6);
-	border-radius: 10px;
-	background: linear-gradient(0.47turn, rgb(230, 230, 245) ,rgb(200, 200, 215));
-	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
-	transform: skew(-0.03turn, 0.001turn);
-}
 
 
 /*pour les element de classe bac (dans la colonne 1 : premiere formation)*/
@@ -317,12 +389,32 @@ h2
 	background: linear-gradient(0.47turn, rgba(250, 10, 10, .4) ,rgba(250, 10, 10, .9));
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
 	transform: skew(-0.05turn, 0.001turn);
+	display: flex;
+	justify-content: center;
 }
+
+
+.conteneur_cadre
+{
+	display: flex;
+	justify-content: center;
+}
+
+.conteneur_texte
+{
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+
+
+
 
 
 .specialisation
 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 .separateur
@@ -340,7 +432,7 @@ h2
 	width: 100%;
 	max-width: 70px;
 	height: auto;
-	transition-property: width, height, filter, max-width;
+	transition-property: filter, transform;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
 	-webkit-filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.15));
@@ -350,11 +442,8 @@ h2
 
 .premiere_formation img:hover
 {
-	width: 100%;
-	max-width: 120px;
-	height: auto;
-	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.1));
-
+	filter: drop-shadow(10px 8px 5px rgba(0, 0, 0, 0.3));
+	transform: skew(-0.03turn);
 }
 
 
@@ -367,6 +456,14 @@ h2
 	flex-direction: row;
 	align-content: center;
 	padding: 20px;
+}
+
+.conteneur_formation, .autres_info_conteneur
+{
+	background: linear-gradient(rgba(255, 44, 44, 0.4), rgba(255, 44, 44, 0.7));
+	margin-top: 20px;
+	border: black groove 4px;
+	border-radius: 10px;
 }
 
 
@@ -391,27 +488,45 @@ h2
 */
 .conteneur_bouton
 {
+	display: flex;
 	justify-content: center;
 }
 
 .conteneur_bouton input
 {
+	
+
 	width: 20%;
-	padding: 10px;
 	height: 30px;
 	margin: 20px;
-	transition-property: width, background;
-	transition-duration: 0.4s;
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+	align-self: center;
+
+	transition-property: background, box-shadow, color;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.15);
+	border: 2px ridge rgb(204, 12, 28);
+	border-radius: 2px;
+	background: rgb(204, 12, 28);
+
 }
 
 .conteneur_bouton input:hover
 {
-	width: 25%;
 	cursor: pointer;
+	background: white;
+	color: rgb(204, 12, 28);
+	box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.35);
 }
 
+.conteneur_bouton input:active
+{
+	background: lightgrey;
+	color: black;
+}
 
 
 
@@ -419,20 +534,43 @@ h2
 
 /* 
 ######################################################################################
+######################################################################################
 ################################## partie footer #####################################
 ######################################################################################
+######################################################################################
 */
+
 footer
 {
-	background: linear-gradient(#57B0E3,#57B0B3  );
+	background: linear-gradient(#42494f, #42494d);
 	display:flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-content: center;
 }
 
 
+.footer_1
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
 
-#nav_footer
+.footer_texte
+{
+	padding: 20px;
+	color: white;
+	font-weight:600;
+}
+
+#nav_footer_reseau_sociaux
+{
+	align-self: center;
+}
+
+#nav_footer_reseau_sociaux, #partenaire_itescia
 {
 	display: flex;
 	flex-direction: row;
@@ -441,8 +579,32 @@ footer
 	margin-bottom: 30px;
 }
 
+.footer_separateur
+{
+	align-self: center;
+	width: 90%;
+	border-bottom: 1px ridge rgba(222, 222, 222, .8);
+	padding-bottom: 15px;
+	text-align: left;
+	color: white;
+	word-wrap: break-word;
+}
 
-#nav_footer a
+#partenaire_itescia
+{
+	background: white;
+	justify-content: space-around;
+}
+
+#partenaire_itescia a
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+
+#nav_footer_reseau_sociaux a
 {
 	display: flex;
 	justify-content: center;
@@ -452,7 +614,7 @@ footer
 	margin-left:10px;
 }
 
-#nav_footer a figure
+#nav_footer_reseau_sociaux a figure, #partenaire_itescia a figure
 {
 	display: flex;
 	justify-content: center;
@@ -460,10 +622,16 @@ footer
 }
 
 
-.logo_footer
+
+/* 
+######################################################################################
+################################## partie logo #######################################
+######################################################################################
+*/
+.logo_footer_reseau_sociaux
 {
-	width: 70px;
-	transition-property: width;
+	width: 35px;
+	transition-property: width, filter, transform;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
 	align-self: center;
@@ -471,9 +639,22 @@ footer
 	filter: drop-shadow(10px 8px 5px #222);
 }
 
-.logo_footer:hover
+.logo_footer_reseau_sociaux:hover
 {
-	width: 60px;
+	width: 30px;
+	filter: drop-shadow(0px 0px 0px #444);
+	transform: skew(-0.04turn, 18deg);
+}
+
+.logo_partenaire
+{
+	transition-property: width, filter;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+.logo_partenaire:hover
+{
+	filter: drop-shadow(10px 8px 5px #222);
 }
 
 
@@ -482,6 +663,31 @@ footer
 	background-color: white;
 	align-self: center;
 }
+
+
+
+
+#nav_mentions
+{
+	display: flex;
+	justify-content: space-around;
+}
+#nav_mentions a
+{
+	color: white;
+	font-size: 14px;
+}
+
+.copyright
+{
+	padding: 10px;
+	color: white;
+}
+
+
+
+
+
 
 
 
