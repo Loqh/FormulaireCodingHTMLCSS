@@ -116,10 +116,44 @@ header
 
 }
 
+#clients
+{
+	background-color: white;
+}
+
+#clients_title
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#clients_content 
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 100px;
+	margin-right: 100px; 
+}
+
+#clients_content img
+{
+	width: 200px;
+}
+
+
 #stories
 {
 	padding: 15px;
 	background-color: white;
+}
+
+#stories_title
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #stories_content
@@ -127,6 +161,8 @@ header
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-left: 100px;
+	margin-right: 100px; 
 }
 
 #stories_content i
@@ -140,9 +176,9 @@ header
 	opacity: 0.5;
 }
 
-#stories_content h3
+#stories_content h3, p
 {
-	font-size: 15px;
+	font-size: 20px;
 }
 
 .stories_box
@@ -156,6 +192,10 @@ header
 footer 
 {
 	background-color : white;
+	border-top: solid 0.5px;
+	border-color: rgba(200, 200, 200, .5);
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 #footer_content
